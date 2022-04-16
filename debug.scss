@@ -1,0 +1,51 @@
+html.debug {
+  .main,
+  .aside,
+  .sidebar,
+  .header,
+  .footer,
+  .sidebar-right,
+  .sidebar-left {
+    position: relative;
+  }
+
+  .main::after,
+  .nav::after,
+  .header::after,
+  .aside::after {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    background-color: red;
+    color: white;
+    border-radius: 4px;
+  }
+
+  .main:after {
+    content: "main";
+  }
+
+  .aside:after {
+    content: "aside";
+  }
+
+  .sidebar:after {
+    content: "sidebar";
+  }
+
+  .header:after {
+    content: "header";
+  }
+
+  .footer:after {
+    content: "footer";
+  }
+
+  .sidebar-right:after {
+    content: "sidebar-right";
+  }
+
+  .sidebar-left:after {
+    content: "sidebar-left";
+  }
+}
