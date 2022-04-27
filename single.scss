@@ -1,0 +1,70 @@
+html.layout-single {
+    @include mobile-nav();
+
+    .body {
+        flex-grow: 1;
+        overflow-x: hidden;
+    }
+
+    .main {
+        grid-area: main;
+        padding-inline: $layout-gap-inline;
+        padding-block: $layout-gap-block;
+        background-color: inherit;
+    }
+
+    .aside {
+        grid-area: aside;
+        padding-inline: $layout-gap-inline;
+        padding-block: $layout-gap-block;
+    }
+
+    .nav {
+        grid-area: main;
+        padding-inline: $layout-gap-inline;
+        padding-block: $layout-gap-block;
+        max-width: $side-bar-width-desktop;
+
+        @media screen and (min-width: 1600px) {
+            grid-area: nav;
+            max-width: unset;
+        }
+    }
+
+    .header {
+        grid-area: header;
+        padding-inline: $layout-gap-inline;
+        padding-block: $layout-gap-block;
+    }
+
+    .footer {
+        grid-area: footer;
+        padding-inline: $layout-gap-inline;
+        padding-block: $layout-gap-block;
+    }
+
+    .body {
+        display: grid;
+        grid-template: auto auto 1fr auto auto / 1fr;
+        grid-template-areas: "header" "nav" "main" "aside" "footer";
+
+
+    @media screen and (min-width: 800px) {
+        grid-template: auto 1fr auto auto / auto #{$standard-reading-max-width} auto; // [ rows / columns ]
+        grid-template-areas:
+            "header header header"
+            ". main ."
+            ". aside ."
+            "footer footer footer";
+    }
+    
+    @media screen and (min-width: 1400px) {
+        grid-template: auto 1fr auto / auto #{$side-bar-width-wide} #{$standard-reading-max-width} #{$side-bar-width-wide} auto; // [ rows / columns ]
+        grid-template-areas:
+            "header header header header header"
+            ". . main . ."
+            ". . aside . ."
+            "footer footer footer footer footer";
+    }
+    }
+}

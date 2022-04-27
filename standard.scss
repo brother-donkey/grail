@@ -5,6 +5,8 @@ html.html {
 }
 
 html.layout-standard {
+  @include mobile-nav();
+
   .body {
     flex-grow: 1;
     overflow-x: hidden;
@@ -20,6 +22,10 @@ html.layout-standard {
 
   .nav {
     grid-area: nav;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
   }
 
   .header {
@@ -28,16 +34,6 @@ html.layout-standard {
 
   .footer {
     grid-area: footer;
-  }
-
-  .sidebar-right {
-    display: none;
-    grid-area: sidebar-right;
-  }
-
-  .sidebar-left {
-    display: none;
-    grid-area: sidebar-left;
   }
 
   .body {

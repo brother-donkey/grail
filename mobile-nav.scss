@@ -1,0 +1,6 @@
+@mixin mobile-nav {
+    &:not(.nav-active) :where(.nav) {
+        display: none;
+        z-index: 1;
+    }
+}

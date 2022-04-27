@@ -1,20 +1,24 @@
-$side-bar-width-desktop: 256px;
+$side-bar-width-desktop: 260px;
 $side-bar-width-wide: 300px;
+$standard-reading-max-width: 768px;
+$layout-gap-inline: var(--grail-layout-gap-inline);
+$layout-gap-block: var(--grail-layout-gap-block);
 
 @import "./debug.scss";
-@import "./gap.scss";
+@import "./mobile-nav.scss";
 @import "./twin.scss";
 @import "./standard.scss";
+@import "./single.scss";
 
 // resets
 html {
   box-sizing: border-box !important;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --grail-layout-gap-inline: 0rem;
+  --grail-layout-gap-block: 0rem;
+  --main-column-max-width: 800px;
+  --sidebars-width: 280px;
+  --sidebars-width-wide: 350px;
+  --desktop-query: var(--main-column-width) + var(--sidebars-width) * 2;
 }
 
 html.html {
@@ -23,6 +27,11 @@ html.html {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+
+  &.html-spaced {
+    --grail-layout-gap-inline: 2rem;
+    --grail-layout-gap-block: 1.5rem;
+  }
 }
 
 .header,
@@ -33,6 +42,16 @@ html.html {
 }
 
 html.layout-standard {
+  .header,
+  .main,
+  .layout,
+  .footer,
+  .aside,
+  .nav {
+    padding-inline: $layout-gap-inline;
+    padding-block: $layout-gap-block;
+  }
+
   .body {
     flex-grow: 1;
     overflow-x: hidden;
@@ -58,6 +77,7 @@ html.layout-standard {
     grid-area: footer;
   }
 
+
   .body {
     display: grid;
     position: relative;
@@ -65,7 +85,7 @@ html.layout-standard {
     grid-template-areas: "header" "nav" "main" "aside" "footer";
 
     @media screen and (min-width: 768px) {
-      grid-template: auto 1fr auto auto / #{$side-bar-width-wide} 1fr; // [ rows / columns ]
+      grid-template: auto 1fr auto auto / #{$side-bar-width-desktop} 1fr; // [ rows / columns ]
       grid-template-areas:
         "header header"
         "nav main"
@@ -73,7 +93,7 @@ html.layout-standard {
         "footer footer";
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1088px) {
       grid-template: auto 1fr auto / #{$side-bar-width-desktop} 1fr #{$side-bar-width-desktop}; // [ rows / columns ]
       grid-template-areas:
         "header header header"
@@ -81,12 +101,14 @@ html.layout-standard {
         "footer footer footer";
     }
 
-    @media screen and (min-width: 1600px) {
-      grid-template: auto 1fr auto / #{$side-bar-width-wide} 1fr #{$side-bar-width-wide}; // [ rows / columns ]
+    @media screen and (min-width: 1400px) {
+      grid-template:
+        auto 1fr auto / auto #{$side-bar-width-wide} 768px
+        #{$side-bar-width-wide} auto; // [ rows / columns ]
       grid-template-areas:
-        "header header header"
-        "nav main aside"
-        "footer footer footer";
+        "header header header header header"
+        ". nav main aside ."
+        "footer footer footer footer footer";
     }
   }
 }

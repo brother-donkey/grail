@@ -12,7 +12,7 @@ The consistuent elements of a given layout correspond to the semantic elements u
 - `<body class="body">`
 - `<nav class="nav">`
 - `<aside class="aside">`
-- `<main class="main">`
+- `<footer class="footer">`
 
 ## Inner containers
 

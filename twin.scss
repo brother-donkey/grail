@@ -1,7 +1,5 @@
-$layout-gap: var(--grail-layout-gap);
-
 html.layout-twin {
-  --grail-layout-gap: 1.5rem;
+  @include mobile-nav();
 
   .body {
     flex-grow: 1;
@@ -10,23 +8,22 @@ html.layout-twin {
 
   .main {
     grid-area: main;
-    padding: $layout-gap;
+    padding-inline: $layout-gap-inline;
+    padding-block: $layout-gap-block;
     background-color: inherit;
   }
 
   .aside {
     grid-area: aside;
-    padding: $layout-gap;
+    padding-inline: $layout-gap-inline;
+    padding-block: $layout-gap-block;
   }
 
   .nav {
     grid-area: main;
-    display: none;
-    padding: $layout-gap;
-    position: -1;
+    padding-inline: $layout-gap-inline;
+    padding-block: $layout-gap-block;
     max-width: $side-bar-width-desktop;
-    opacity: 0.5;
-    background-color: red;
 
     @media screen and (min-width: 1600px) {
       grid-area: nav;
@@ -36,12 +33,14 @@ html.layout-twin {
 
   .header {
     grid-area: header;
-    padding: $layout-gap;
+    padding-inline: $layout-gap-inline;
+    padding-block: $layout-gap-block;
   }
 
   .footer {
     grid-area: footer;
-    padding: $layout-gap;
+    padding-inline: $layout-gap-inline;
+    padding-block: $layout-gap-block;
   }
 
   .body {

@@ -1,51 +1,54 @@
 html.debug {
   .main,
+  .nav,
   .aside,
-  .sidebar,
   .header,
-  .footer,
-  .sidebar-right,
-  .sidebar-left {
+  .footer {
     position: relative;
   }
 
   .main::after,
   .nav::after,
   .header::after,
+  .footer::after,
   .aside::after {
     position: absolute;
     inset-block-start: 0;
     inset-inline-start: 0;
-    background-color: red;
+    background-color: gray;
     color: white;
+    border: 1px solid white;
+    padding-inline: 4px;
+    padding-block: 2px;
     border-radius: 4px;
   }
 
+  .nav:after {
+    content: ".nav";
+  }
+
   .main:after {
-    content: "main";
+    content: ".main";
   }
 
   .aside:after {
-    content: "aside";
+    content: ".aside";
   }
 
   .sidebar:after {
-    content: "sidebar";
+    content: ".sidebar";
   }
 
   .header:after {
-    content: "header";
+    content: ".header";
   }
 
   .footer:after {
-    content: "footer";
+    content: ".footer";
   }
 
-  .sidebar-right:after {
-    content: "sidebar-right";
-  }
-
-  .sidebar-left:after {
-    content: "sidebar-left";
+  .border-recursive,
+  .border-recursive * {
+    border: 1px dashed white;
   }
 }
