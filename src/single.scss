@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 .#{$grail-class-prefix}layout-single {
   .#{$grail-class-prefix}main {
     padding-inline: $layout-gap-inline;

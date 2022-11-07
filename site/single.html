@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="html layout-standard html-spaced">
+<html lang="en" class="html layout-single">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="./site.scss" />
     <link rel="stylesheet" href="./decorative.scss" />
   </head>
-  <body class="body border-recursive linear-gradient-background">
+  <body class="body gap-2 outline-recursive">
     <header id="layout-header" class="header header-decoration">
-      <p>Header</p>
+      <include src="./site/includes/header.html"></include>
     </header>
     <main id="layout-main" class="main">
       <p>
@@ -69,7 +69,7 @@
       <p>Nav</p>
     </nav>
     <footer id="layout-footer" class="footer footer-decoration">
-      <p>Footer</p>
+      <include src="./site/includes/footer.html"></include>
     </footer>
     <script src="./index.js"></script>
   </body>

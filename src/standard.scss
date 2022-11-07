@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 .#{$grail-class-prefix}layout-standard {
   .#{$grail-class-prefix}header,
   .#{$grail-class-prefix}main,

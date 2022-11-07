@@ -15,9 +15,9 @@ html.debug {
     position: absolute;
     inset-block-start: 0;
     inset-inline-start: 0;
-    background-color: gray;
+    background-color: darkslateblue;
     color: white;
-    border: 1px solid white;
+    outline: 1px solid darkblue;
     padding-inline: 4px;
     padding-block: 2px;
     border-radius: 4px;
@@ -47,8 +47,8 @@ html.debug {
     content: ".footer";
   }
 
-  .border-recursive,
-  .border-recursive * {
-    border: 1px dashed white;
+  .outline-recursive,
+  .outline-recursive * {
+    outline: 1px dashed darkblue;
   }
 }
