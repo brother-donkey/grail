@@ -1,0 +1,12 @@
+@import "./debug.scss";
+@import "./src/grail.scss";
+
+// Site resets
+html {
+  box-sizing: border-box !important;
+  --grail-layout-gap-inline: 0rem;
+  --grail-layout-gap-block: 0rem;
+  --sidebars-width: 280px;
+  --sidebars-width-wide: 350px;
+  --desktop-query: var(--main-column-width) + var(--sidebars-width) * 2;
+}

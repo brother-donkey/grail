@@ -1,0 +1,44 @@
+.#{$grail-class-prefix}layout-standard {
+  .#{$grail-class-prefix}header,
+  .#{$grail-class-prefix}main,
+  .#{$grail-class-prefix}layout,
+  .#{$grail-class-prefix}footer,
+  .#{$grail-class-prefix}aside,
+  .#{$grail-class-prefix}nav {
+    padding-inline: $layout-gap-inline;
+  }
+
+  .#{$grail-class-prefix}body {
+    display: grid;
+    position: relative;
+    grid-template: auto auto 1fr auto auto / 1fr;
+    grid-template-areas: "header" "nav" "main" "aside" "footer";
+
+    @media screen and (min-width: 768px) {
+      grid-template: auto 1fr auto auto / #{$side-bar-width-desktop} 1fr;
+      grid-template-areas:
+        "header header"
+        "nav main"
+        "nav aside"
+        "footer footer";
+    }
+
+    @media screen and (min-width: 1096px) {
+      grid-template: auto 1fr auto / #{$side-bar-width-desktop} 1fr #{$side-bar-width-desktop};
+      grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    }
+
+    @media screen and (min-width: 1400px) {
+      grid-template:
+        auto 1fr auto / auto #{$side-bar-width-wide} 768px
+        #{$side-bar-width-wide} auto;
+      grid-template-areas:
+        "header header header header header"
+        ". nav main aside ."
+        "footer footer footer footer footer";
+    }
+  }
+}

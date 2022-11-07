@@ -1,0 +1,28 @@
+.#{$grail-class-prefix}layout-single {
+  .#{$grail-class-prefix}main {
+    padding-inline: $layout-gap-inline;
+    background-color: inherit;
+  }
+
+  .#{$grail-class-prefix}aside {
+    padding-inline: $layout-gap-inline;
+  }
+
+  .#{$grail-class-prefix}nav {
+    padding-inline: $layout-gap-inline;
+  }
+
+  .#{$grail-class-prefix}header {
+    padding-inline: $layout-gap-inline;
+  }
+
+  .#{$grail-class-prefix}footer {
+    padding-inline: $layout-gap-inline;
+  }
+
+  .#{$grail-class-prefix}body {
+    display: grid;
+    grid-template: auto auto 1fr auto auto / 1fr;
+    grid-template-areas: "header" "nav" "main" "aside" "footer";
+  }
+}

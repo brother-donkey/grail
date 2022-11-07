@@ -1,0 +1,47 @@
+$grail-class-prefix: "" !default;
+$side-bar-width-desktop: 260px !default;
+$side-bar-width-wide: 300px !default;
+$layout-gap-inline: var(--grail-layout-gap-inline) !default;
+$layout-gap-block: var(--grail-layout-gap-block) !default;
+
+.#{$grail-class-prefix}html {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+
+  --grail-layout-gap-inline: 2rem;
+  --grail-layout-gap-block: 1.5rem;
+}
+
+.#{$grail-class-prefix}body,
+.#{$grail-class-prefix}footer {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.#{$grail-class-prefix}body {
+  flex-grow: 1;
+  overflow-x: hidden;
+}
+
+.#{$grail-class-prefix}main {
+  grid-area: main;
+}
+
+.#{$grail-class-prefix}aside {
+  grid-area: aside;
+}
+
+.#{$grail-class-prefix}nav {
+  grid-area: nav;
+}
+
+.#{$grail-class-prefix}header {
+  grid-area: header;
+}
+
+.#{$grail-class-prefix}footer {
+  grid-area: footer;
+}
