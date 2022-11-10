@@ -9,14 +9,15 @@ html.debug {
 
   .main::after,
   .nav::after,
+  .body:after,
   .header::after,
   .footer::after,
   .aside::after {
     position: absolute;
     inset-block-start: 0;
     inset-inline-start: 0;
-    background-color: darkslateblue;
     color: white;
+    background-color: darkslateblue;
     outline: 1px solid darkblue;
     padding-inline: 4px;
     padding-block: 2px;
@@ -24,27 +25,32 @@ html.debug {
   }
 
   .nav:after {
-    content: ".nav";
+    content: '<nav class="nav">';
   }
 
   .main:after {
-    content: ".main";
+    content: '<main class="main">';
   }
 
   .aside:after {
-    content: ".aside";
-  }
-
-  .sidebar:after {
-    content: ".sidebar";
+    content: '<aside class="aside"';
   }
 
   .header:after {
-    content: ".header";
+    content: '<header class="header">';
   }
 
   .footer:after {
-    content: ".footer";
+    content: '<footer class="footer"';
+  }
+
+  .body:after {
+    background-color: blueviolet;
+    outline: 1px solid blueviolet;
+    inset-block-start: unset;
+    inset-inline-start: unset;
+    inset-inline-end: 0;
+    content: '<body class="body">';
   }
 
   .outline-recursive,

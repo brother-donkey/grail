@@ -1,63 +1,84 @@
+@font-face {
+  font-family: "Cascadia Code", Consolas, "Courier New", monospace;
+  src: url("./CascadiaCode.ttf");
+}
+
+$normal-font-stack: Verdana, Arial, Helvetica, sans-serif;
+$monospace-font-stack: "Cascadia Code", "Courier New", Courier, monospace;
+
+@import "@microsoft/atlas-css/src/index.scss";
 @import "./debug.scss";
 @import "../src/grail.scss";
 
-// Modern CSS Reset - https://piccalil.li/blog/a-modern-css-reset/
-
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+html {
+  font-size: 20px;
 }
 
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
+// .header {
+//   margin-bottom: 16px;
+// }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
-}
+// .nav {
+//   position: fixed;
+//   top: 100px;
+//   right: 0;
+//   left: 0;
+//   bottom: 0;
+//   background: white;
 
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
+//   &:not(.is-active) {
+//     transform: translateX(-100%);
+//   }
+// }
 
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
+// .nav {
+//   container-type: inline-size;
+//   container-name: nav;
+// }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
+// @mixin horizontal-nav {
+// ul,
+// li {
+//   display: inline-block;
+//   list-style-type: none !important;
+// }
+// a {
+//   display: block;
+//   border: 1px solid $border;
+//   border-radius: $border-radius;
+// }
+// a {
+//   display: block;
+//   padding: 4px 12px;
+// }
+// span {
+//   display: block;
+//   padding: 4px 12px;
+//   margin-block-start: 0;
+// }
+// .parent-list {
+//   font-size: $font-size-sm;
+//   display: grid;
+//   gap: 8px;
+//   grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+// }
+// .parent-list li span {
+//   color: $text-subtle;
+// }
+// .parent-list > li > a {
+//   display: block;
+//   margin-block-start: 10px;
+// }
+// ul:not(.parent-list) ul,
+// li {
+//   margin-block-start: 0 !important;
+// }
+// }
 
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
+// @container nav (max-width: 768px) {
+//   @include horizontal-nav;
+// }
 
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
+// .layout-single nav {
+//   @include horizontal-nav;
+// }

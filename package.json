@@ -11,8 +11,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.4.0",
-    "parcel": "^2.4.0",
+    "@microsoft/atlas-css": "^3.27.0",
+    "@parcel/transformer-sass": "^2.8.0",
+    "parcel": "^2.8.0",
     "posthtml-include": "^1.7.4",
     "rimraf": "^3.0.2"
   }

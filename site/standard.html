@@ -6,71 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grail</title>
     <link rel="stylesheet" href="./site.scss" />
-    <link rel="stylesheet" href="./decorative.scss" />
   </head>
   <body class="body outline-recursive">
-    <header id="layout-header" class="header header-decoration">
-      <include src="./site/includes/header.html"></include>
-    </header>
+    <include src="./site/includes/header.html"></include>
     <main id="layout-main" class="main">
-      <p>
-        It uses various psychic powers even while it’s sleeping, so you can’t
-        tell whether or not it’s awake.Kingdra sleeps on the seafloor where it
-        is otherwise devoid of life. When a storm arrives, the Pokémon is said
-        to awaken and wander about in search of prey.Despite its appearance,
-        it’s carnivorous. It clamps down on its prey with both sides of its
-        shell and doesn’t let go until they stop moving.
-      </p>
-
-      <p>
-        Nidorino has a horn that is harder than a diamond. If it senses a
-        hostile presence, all the barbs on its back bristle up at once, and it
-        challenges the foe with all its might.A cunning and terrifying Pokémon,
-        its cuteness makes opponents let down their guard—and then it swallows
-        them whole with its huge jaws.Bulbasaur can be seen napping in bright
-        sunlight. There is a seed on its back. By soaking up the sun’s rays, the
-        seed grows progressively larger.
-      </p>
-
-      <p>
-        Articuno is a legendary bird Pokémon that can control ice. The flapping
-        of its wings chills the air. As a result, it is said that when this
-        Pokémon flies, snow will fall.Nidoking’s thick tail packs enormously
-        destructive power. With one swing, it can topple a metal transmission
-        tower. Once this Pokémon goes on a rampage, there is no stopping
-        it.Friction between the air and its fur produces static electricity.
-        When Electrike runs, it makes a crackling sound.
-      </p>
-
-      <p>
-        Skitty is known to chase around playfully after its own tail. In the
-        wild, this Pokémon lives in holes in the trees of forests. It is very
-        popular as a pet because of its adorable looks.Friction between the air
-        and its fur produces static electricity. When Electrike runs, it makes a
-        crackling sound.The humps on Camerupt’s back are formed by a
-        transformation of its bones. They sometimes blast out molten magma. This
-        Pokémon apparently erupts often when it is enraged.
-      </p>
-
-      <p>
-        Motionless, it hangs from trees, waiting for its bug Pokémon prey to
-        come to it. Its favorite in Alola is Cutiefly.Charmeleon mercilessly
-        destroys its foes using its sharp claws. If it encounters a strong foe,
-        it turns aggressive. In this excited state, the flame at the tip of its
-        tail flares with a bluish white color.Bulbasaur can be seen napping in
-        bright sunlight. There is a seed on its back. By soaking up the sun’s
-        rays, the seed grows progressively larger.
-      </p>
+      <div class="markdown margin-top-md">
+        <h1 class="font-weight-bold">The standard layout</h1>
+        <p>
+          The standard <em>is</em> the holy grail layout. After all your basic
+          classes and elements are made, all you need to do is place the
+          <code>layout-standard</code> class on your html element. You can find
+          the basics in the <a href="~/site/index.html">overview</a>.
+        </p>
+        <h2>When should I use the standard layout?</h2>
+        <p>
+          Scaling from one column on narrow screens, then two columns on tablet
+          and small laptops, to three columns on the widest screens, the
+          standard provides the flexibly for nearly any use case.
+        </p>
+        <p>
+          With the exception of the <code>body</code>, all elements are option
+          (though I can't really recommend omitting <code>main</code>`).
+        </p>
+        <h2>Just give me the markup!</h2>
+        <p>Okay, here it is.</p>
+        <!-- 
+  <html class="layout-standard">
+      <body class="body">
+          <header class="header"></header>
+          <nav class="nav"></nav>
+          <main class="main"></main>
+          <aside class="aside"></aside>
+          <footer class="footer"></footer>
+      </body>
+  </html>
+   -->
+        <pre
+          class="margin-block-md"
+        ><code>&lt;html class=&quot;layout-standard&quot;&gt;
+&lt;body class=&quot;body&quot;&gt;
+    &lt;header class=&quot;header&quot;&gt;&lt;/header&gt;
+    &lt;nav class=&quot;nav&quot;&gt;&lt;/nav&gt;
+    &lt;main class=&quot;main&quot;&gt;&lt;/main&gt;
+    &lt;aside class=&quot;aside&quot;&gt;&lt;/aside&gt;
+    &lt;footer class=&quot;footer&quot;&gt;&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
     </main>
-    <aside id="layout-aside" class="aside">
-      <p>Aside</p>
-    </aside>
-    <nav id="layout-nav" class="nav">
-      <p>Nav</p>
-    </nav>
-    <footer id="layout-footer" class="footer footer-decoration">
-      <include src="./site/includes/footer.html"></include>
-    </footer>
+    <include src="./site/includes/aside.html"></include>
+    <include src="./site/includes/nav.html"></include>
+    <include src="./site/includes/footer.html"></include>
     <script src="./index.js"></script>
   </body>
 </html>
