@@ -14,71 +14,18 @@ html {
   font-size: 20px;
 }
 
-// .header {
-//   margin-bottom: 16px;
-// }
+@media screen and (max-width: 768px) {
+  nav .markdown {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
 
-// .nav {
-//   position: fixed;
-//   top: 100px;
-//   right: 0;
-//   left: 0;
-//   bottom: 0;
-//   background: white;
+    input:not(:checked) ~ .subcontainer {
+      display: none;
+    }
 
-//   &:not(.is-active) {
-//     transform: translateX(-100%);
-//   }
-// }
-
-// .nav {
-//   container-type: inline-size;
-//   container-name: nav;
-// }
-
-// @mixin horizontal-nav {
-// ul,
-// li {
-//   display: inline-block;
-//   list-style-type: none !important;
-// }
-// a {
-//   display: block;
-//   border: 1px solid $border;
-//   border-radius: $border-radius;
-// }
-// a {
-//   display: block;
-//   padding: 4px 12px;
-// }
-// span {
-//   display: block;
-//   padding: 4px 12px;
-//   margin-block-start: 0;
-// }
-// .parent-list {
-//   font-size: $font-size-sm;
-//   display: grid;
-//   gap: 8px;
-//   grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
-// }
-// .parent-list li span {
-//   color: $text-subtle;
-// }
-// .parent-list > li > a {
-//   display: block;
-//   margin-block-start: 10px;
-// }
-// ul:not(.parent-list) ul,
-// li {
-//   margin-block-start: 0 !important;
-// }
-// }
-
-// @container nav (max-width: 768px) {
-//   @include horizontal-nav;
-// }
-
-// .layout-single nav {
-//   @include horizontal-nav;
-// }
+    input:checked + label {
+      text-decoration: underline;
+    }
+  }
+}
