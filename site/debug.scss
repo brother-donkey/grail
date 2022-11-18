@@ -50,11 +50,12 @@ html.debug {
     inset-block-start: unset;
     inset-inline-start: unset;
     inset-inline-end: 0;
+    outline: 2px solid blueviolet;
     content: '<body class="body">';
   }
 
   .outline-recursive,
   .outline-recursive * {
-    outline: 1px dashed darkblue;
+    outline: 2px solid darkblue;
   }
 }
