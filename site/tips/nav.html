@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="html layout-single">
+<html lang="en" class="html layout-standard">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,21 +7,25 @@
     <title>Grail</title>
     <link rel="stylesheet" href="../site.scss" />
   </head>
-  <body class="body gap-2 outline-recursive">
+  <body class="body outline-recursive">
     <include src="./site/includes/header.html"></include>
+    <include src="./site/includes/modal-nav.html"></include>
 
     <main id="layout-main" class="main">
       <div class="markdown margin-top-md">
-        <div style="max-width: 60ch" class="margin-inline-auto">
-          <h1 class="font-weight-bold">Tips - Nav</h1>
-          <p>Nav can be a sticky wicket.</p>
-          <h2>Determining when to hide nav?</h2>
-          <p>
-            TBD
-          </p>
-      </div>
+        <h1 class="font-weight-bold">Navigating the <code>nav</code></h1>
+        <p>
+          The nav element can be tough nut to crack because it can be used in so
+          many ways. We often want it to be invisible on narrow screens, but
+          appear on larger ones. Some sites don't need one at all, while others
+          like to place breadcrumbs or secondary navigation in this spot. On
+          some layouts, it can morph between a horiontal and vertical alignment.
+          Phew!
+        </p>
+        <h2>So what is to be done with nav?</h2>
+        <p>TBD</p>
+       
     </main>
-    <include src="./site/includes/aside.html"></include>
     <include src="./site/includes/nav.html"></include>
     <include src="./site/includes/footer.html"></include>
     <script src="../index.js" type="module"></script>
