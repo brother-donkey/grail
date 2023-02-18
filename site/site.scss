@@ -34,6 +34,11 @@ html {
   }
 }
 
+.reading-width {
+  max-width: 60ch;
+  padding: var(--grail-layout-gap-inline);
+}
+
 .burger {
   display: block;
   appearance: none;
@@ -41,6 +46,12 @@ html {
   background: transparent;
   width: 48px;
   height: 48px;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+  &:not(.burger-expanded):hover {
+    background-color: $body-background-medium;
+  }
 
   .burger-top,
   .burger-middle,
@@ -60,6 +71,9 @@ html {
   }
 
   &.burger-expanded {
+    * {
+      border-color: white !important;
+    }
     .burger-top {
       transform: rotate(45deg) translate(5px, 5px);
     }
@@ -69,5 +83,31 @@ html {
     .burger-bottom {
       transform: rotate(135deg) translate(-6px, 7px);
     }
+  }
+}
+
+.z-index-100 {
+  z-index: 100;
+}
+
+.z-index-101 {
+  z-index: 101;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+
+  .modal-content {
+    border: 1px solid $border;
+    border-radius: $border-radius-lg;
+    padding: $spacer-5;
+    min-width: 60vw;
+    max-width: 90vw;
+    min-height: 80vh;
+    max-height: 85vh;
+    background-color: #fff;
   }
 }

@@ -7,6 +7,10 @@
     padding-inline: $layout-gap-inline;
   }
 
+  .#{$grail-class-prefix}body {
+    row-gap: var(--grail-layout-gap-block);
+  }
+
   .#{$grail-class-prefix}main {
     padding-inline: $layout-gap-inline calc(#{$layout-gap-inline} / 2);
     background-color: inherit;
