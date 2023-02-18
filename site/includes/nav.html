@@ -1,85 +1,123 @@
-<nav id="layout-nav" class="nav">
-  <div class="markdown margin-top-md-tablet margin-block-xxs border">
+<nav id="layout-nav" class="nav display-none display-block-tablet">
+<div
+    class="nav-menu display-none-tablet margin-block-xs reading-width margin-inline-auto padding-inline-md-desktop"
+  >
     <a
-      class="button button-block button-clear button-primary font-size-xs"
+      class="button button-block justify-content-flex-start button-clear button-primary font-size-xs font-size-sm-desktop"
       href="~/site/index.html"
       >Overview</a
     >
     <a
-      class="button button-block button-clear button-primary font-size-xs"
+      class="button button-block justify-content-flex-start button-clear button-primary font-size-xs font-size-sm-desktop"
       href="~/site/use.html"
       >Use</a
     >
-    <div>
-      <input
-        type="checkbox"
-        name="layout-expander"
-        id="layout-expander"
-        class="visually-hidden"
-      />
-      <label
-        for="layout-expander"
-        class="button button-block button-clear font-size-xs"
-      >
-        Layouts
-      </label>
-      <div class="subcontainer">
-        <a
-          class="button button-clear button-primary font-size-xs flex-grow-1"
-          href="~/site/standard.html"
-          >Standard</a
+      <details class="popover display-block">
+        <summary
+          class="button button-block justify-content-flex-start button-clear font-size-xs font-size-sm-desktop"
         >
-        <a
-          class="button button-clear button-primary font-size-xs flex-grow-1"
-          href="~/site/twin.html"
-          >Twin</a
-        >
-        <a
-          class="button button-clear button-primary font-size-xs flex-grow-1"
-          href="~/site/single.html"
-          >Single</a
-        >
-      </div>
+          Layouts
+        </summary>
+
+        <div class="popover-content padding-none display-block">
+            <a
+              class="button justify-content-flex-start button-block button-clear button-primary font-size-xs font-size-sm-desktop flex-grow-1"
+              href="~/site/standard.html"
+              >Standard</a
+            >
+            <a
+              class="button justify-content-flex-start button-block button-clear button-primary font-size-xs font-size-sm-desktop flex-grow-1"
+              href="~/site/twin.html"
+              >Twin</a
+            >
+            <a
+              class="button justify-content-flex-start button-block button-clear button-primary font-size-xs font-size-sm-desktop flex-grow-1"
+              href="~/site/single.html"
+              >Single</a
+            >
+          </div>
+      </details>
+      <details class="popover display-block">
+          <summary class="button button-block justify-content-flex-start button-clear font-size-xs font-size-sm-desktop">Tips</summary>
+          <div class="popover-content padding-none">
+              <a
+              class="button button-clear button-block justify-content-flex-start button-primary font-size-xs font-size-sm-desktop"
+              href="~/site/tips/nav.html"
+              >Nav</a
+              >
+              <a
+              class="button button-clear button-block justify-content-flex-start button-primary font-size-xs font-size-sm-desktop"
+              href="~/site/twin.html"
+              >Breakpoints</a
+              >
+              <a
+              class="button button-clear button-block justify-content-flex-start button-primary font-size-xs font-size-sm-desktop"
+              href="~/site/twin.html"
+              >Variables</a
+              >
+              <a
+              class="button button-clear button-block justify-content-flex-start button-primary font-size-xs font-size-sm-desktop"
+              href="~/site/twin.html"
+              >Gap</a
+              >
+              <a
+              class="button button-clear button-block justify-content-flex-start button-primary font-size-xs font-size-sm-desktop"
+              href="~/site/twin.html"
+              >Containers</a
+              >
+              <a
+              class="button button-clear button-block justify-content-flex-start button-primary font-size-xs font-size-sm-desktop"
+              href="~/site/twin.html"
+              >Code blocks</a
+              >
+          </div>
+      </details>
     </div>
-    <div>
-      <input
-        type="checkbox"
-        name="tip-expander"
-        id="tip-expander"
-        class="visually-hidden"
-      />
-      <label
-        for="tip-expander"
-        class="button button-block button-clear font-size-xs"
-        >Tips</label
-      >
-      <div class="subcontainer">
-        <a
-          class="button button-clear button-primary font-size-xs"
-          href="~/site/tips/nav.html"
-          >Nav</a
-        >
-        <a
-          class="button button-clear button-primary font-size-xs"
-          href="~/site/twin.html"
-          >Breakpoints</a
-        >
-        <a
-          class="button button-clear button-primary font-size-xs"
-          href="~/site/twin.html"
-          >Variables</a
-        >
-        <a
-          class="button button-clear button-primary font-size-xs"
-          href="~/site/twin.html"
-          >Gap</a
-        >
-        <a
-          class="button button-clear button-primary font-size-xs"
-          href="~/site/twin.html"
-          >Containers</a
-        >
-      </div>
-    </div>
+  </div>
+  <div
+    class="display-none display-block-tablet markdown padding-left-sm margin-top-md-tablet"
+  >
+    <ul class="margin-none parent-list">
+      <li class="margin-bottom-xxs">
+        <a href="~/site/index.html">Overview</a>
+      </li>
+      <li class="margin-bottom-xxs">
+        <a href="~/site/use.html">Use</a>
+      </li>
+      <li class="margin-block-xxs">
+        <span>Layouts</span>
+        <ul class="margin-left-xs margin-top-xxs">
+          <li class="margin-bottom-xxs">
+            <a href="~/site/standard.html">Standard</a>
+          </li>
+          <li class="margin-bottom-xxs">
+            <a href="~/site/twin.html">Twin</a>
+          </li>
+          <li class="margin-bottom-xxs">
+            <a href="~/site/single.html">Single</a>
+          </li>
+        </ul>
+      </li>
+      <li class="margin-block-xxs">
+        <span>Tips</span>
+        <ul class="margin-left-xs margin-top-xxs">
+          <li class="margin-bottom-xxs">
+            <a href="~/site/tips/nav.html">Nav</a>
+          </li>
+          <li class="margin-bottom-xxs">
+            <a href="~/site/twin.html">Breakpoints</a>
+          </li>
+          <li class="margin-bottom-xxs">
+            <a href="~/site/twin.html">Variables</a>
+          </li>
+          <li class="margin-bottom-xxs">
+            <a href="~/site/twin.html">Gap</a>
+          </li>
+          <li class="margin-bottom-xxs">
+            <a href="~/site/twin.html">Containers</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </nav>

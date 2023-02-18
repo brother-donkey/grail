@@ -2,7 +2,7 @@
 
 .#{$grail-class-prefix}layout-single {
   .#{$grail-class-prefix}main {
-    padding-inline: $layout-gap-inline;
+    padding-inline: 0;
     background-color: inherit;
   }
 
@@ -11,7 +11,7 @@
   }
 
   .#{$grail-class-prefix}nav {
-    padding-inline: $layout-gap-inline;
+    padding-inline: 0;
   }
 
   .#{$grail-class-prefix}header {

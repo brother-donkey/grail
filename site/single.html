@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="./site.scss" />
   </head>
   <body class="body gap-2 outline-recursive">
-    <include src="./site/includes/header.html"></include>
-
+    <include src="./site/includes/header-burger-all-widths.html"></include>
+    <include src="./site/includes/modal-nav.html"></include>
     <main id="layout-main" class="main">
-      <div class="markdown margin-top-md">
-        <div style="max-width: 60ch" class="margin-inline-auto">
+      <div class="markdown">
+        <div class="margin-inline-auto reading-width">
           <h1 class="font-weight-bold">The single layout</h1>
           <p>
             The single is what it sounds like: a single column layout. It starts
@@ -20,6 +20,15 @@
             basic classes and elements are made, all you need to do is place the
             <code>layout-single</code> class on your html element. You can find
             the basics in the <a href="~/site/index.html">overview</a>.
+          </p>
+          <p>
+            <em>
+              Note that by default all single containers are full width. This
+              page uses a class to constrain the reading width of inner
+              elements. Try
+              <code>document.querySelectorAll('.reading-width')</code> to see
+              them.
+            </em>
           </p>
           <h2>When should I use the single layout?</h2>
           <p>
@@ -64,8 +73,7 @@
       </div>
     </main>
     <include src="./site/includes/aside.html"></include>
-    <include src="./site/includes/nav.html"></include>
     <include src="./site/includes/footer.html"></include>
-    <script src="./index.js"></script>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>

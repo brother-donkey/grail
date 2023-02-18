@@ -33,3 +33,81 @@ html {
     }
   }
 }
+
+.reading-width {
+  max-width: 60ch;
+  padding: var(--grail-layout-gap-inline);
+}
+
+.burger {
+  display: block;
+  appearance: none;
+  border: none;
+  background: transparent;
+  width: 48px;
+  height: 48px;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+  &:not(.burger-expanded):hover {
+    background-color: $body-background-medium;
+  }
+
+  .burger-top,
+  .burger-middle,
+  .burger-bottom {
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.175);
+    display: block;
+    border-radius: 4px;
+    border-top: 4px solid black;
+  }
+
+  .burger-middle {
+    margin-top: 4px;
+  }
+
+  .burger-bottom {
+    margin-top: 4px;
+  }
+
+  &.burger-expanded {
+    * {
+      border-color: white !important;
+    }
+    .burger-top {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .burger-middle {
+      opacity: 0;
+    }
+    .burger-bottom {
+      transform: rotate(135deg) translate(-6px, 7px);
+    }
+  }
+}
+
+.z-index-100 {
+  z-index: 100;
+}
+
+.z-index-101 {
+  z-index: 101;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+
+  .modal-content {
+    border: 1px solid $border;
+    border-radius: $border-radius-lg;
+    padding: $spacer-5;
+    min-width: 60vw;
+    max-width: 90vw;
+    min-height: 80vh;
+    max-height: 85vh;
+    background-color: #fff;
+  }
+}

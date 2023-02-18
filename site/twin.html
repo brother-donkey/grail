@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="html layout-twin linear-gradient-background">
+<html lang="en" class="html layout-twin">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="./site.scss" />
   </head>
   <body class="body outline-recursive">
-    <include src="./site/includes/header.html"></include>
-    <main id="layout-main" class="main markdown">
+    <include src="./site/includes/header-burger-all-widths.html"></include>
+    <include src="./site/includes/modal-nav.html"></include>
+    <main id="layout-main" class="main markdown overflow-hidden">
       <h1 class="font-weight-bold">The twin layout</h1>
       <p>
         The twin layout is intended for displaying side by side content. On
@@ -29,11 +30,20 @@
         single. It really depends.
       </p>
       <h2>Just give me the markup!</h2>
-      <p>Okay, it's over there ->.</p>
+      <pre
+        class="margin-block-md"
+      ><code>&lt;html class=&quot;layout-single&quot;&gt;
+  &lt;body class=&quot;body&quot;&gt;
+     &lt;header class=&quot;header&quot;&gt;&lt;/header&gt;
+     &lt;nav class=&quot;nav&quot;&gt;&lt;/nav&gt;
+     &lt;main class=&quot;main&quot;&gt;&lt;/main&gt;
+     &lt;aside class=&quot;aside&quot;&gt;&lt;/aside&gt;
+     &lt;footer class=&quot;footer&quot;&gt;&lt;/footer&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;</code></pre>
     </main>
     <include src="./site/includes/aside-twin.html"></include>
-    <include src="./site/includes/nav.html"></include>
     <include src="./site/includes/footer.html"></include>
-    <script src="./index.js"></script>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>
