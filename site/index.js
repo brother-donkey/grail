@@ -30,6 +30,12 @@ class ModalTriggerElement extends HTMLElement {
   connectedCallback() {
     this.addEventListener("click", () => {
       this.modal.hidden = !this.modal.hidden;
+      // being lazy here, I admit
+      if (this.modal.hidden) {
+        document.documentElement.style.cssText = "";
+      } else {
+        document.documentElement.style.overflow = "hidden";
+      }
     });
   }
 }
