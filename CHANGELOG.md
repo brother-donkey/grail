@@ -1,5 +1,11 @@
 # grail-css
 
+## 0.0.3
+
+### Patch Changes
+
+- e7cb9ca: Remove test script from package.json
+
 ## 0.0.2
 
 ### Patch Changes
