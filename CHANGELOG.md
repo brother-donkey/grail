@@ -1,5 +1,11 @@
 # grail-css
 
+## 0.0.4
+
+### Patch Changes
+
+- More release testing
+
 ## 0.0.3
 
 ### Patch Changes
