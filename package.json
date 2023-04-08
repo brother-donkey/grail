@@ -3,7 +3,6 @@
   "version": "0.0.2",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel \"./site/*.html\" --dist-dir \"site-dist\" --no-cache",
     "build-css": "rimraf /dist && parcel build \"src/grail.scss\" \"src/shared.scss\" \"src/single.scss\" \"src/twin.scss\" \"src/standard.scss\" --dist-dir  \"dist\"",
     "prepublishOnly": "npm run build-css"
