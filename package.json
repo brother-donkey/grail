@@ -1,6 +1,6 @@
 {
   "name": "grail-css",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "",
   "scripts": {
     "start": "parcel \"./site/*.html\" --dist-dir \"site-dist\" --no-cache",
