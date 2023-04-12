@@ -47,4 +47,4 @@ jobs:
         if: ${{ steps.changesets.outputs.published == 'true' }}
         run: |
           echo "Successfully published"
-          ls
+          ls -lR
