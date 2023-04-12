@@ -42,9 +42,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Echo package contents
-        #
+      - name: List package contents
         if: ${{ steps.changesets.outputs.published == 'true' }}
         run: |
           echo "Successfully published"
-          ls -lR
+          ls -l
