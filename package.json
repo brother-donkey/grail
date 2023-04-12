@@ -31,7 +31,7 @@
       ]
     },
     "build:site": {
-      "command": "parcel build \"./site/*.html\" --dist-dir \"site-dist\" --no-cache --no-optimize",
+      "command": "parcel build \"./site/*.html\" --dist-dir \"dist-site\" --no-cache --no-optimize",
       "output": [
         "dist-site/**/*"
       ],
