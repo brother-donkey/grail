@@ -30,6 +30,7 @@
   "license": "ISC",
   "devDependencies": {
     "wireit": "^0.9.5",
+    "lightningcss": "^1.19.0",
     "@microsoft/atlas-css": "^3.27.0",
     "@microsoft/atlas-js": "^1.5.4",
     "@parcel/transformer-sass": "^2.8.0",
