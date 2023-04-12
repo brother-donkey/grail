@@ -9,7 +9,7 @@
   "scripts": {
     "start": "parcel \"./site/*.html\" --dist-dir \"site-dist\" --no-cache",
     "build:css": "wireit",
-    "prepublishOnly": "npm run build-css"
+    "prepublishOnly": "npm run build:css"
   },
   "wireit": {
     "build:css": {
