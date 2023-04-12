@@ -1,5 +1,17 @@
 # grail-css
 
+## 0.0.12
+
+### Patch Changes
+
+- Continued testing of release pipeline.
+
+## 0.0.11
+
+### Patch Changes
+
+- Modify files publish, still only testing release.
+
 ## 0.0.6
 
 ### Patch Changes

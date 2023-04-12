@@ -1,21 +1,41 @@
 {
   "name": "grail-css",
-  "version": "0.0.10",
-  "description": "",
+  "version": "0.0.12",
+  "description": "Easy CSS layouts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brother-donkey/grail"
+  },
   "scripts": {
     "start": "parcel \"./site/*.html\" --dist-dir \"site-dist\" --no-cache",
-    "build-css": "rimraf /dist && parcel build \"src/grail.scss\" \"src/shared.scss\" \"src/single.scss\" \"src/twin.scss\" \"src/standard.scss\" --dist-dir  \"dist\"",
-    "prepublishOnly": "npm run build-css"
+    "build:css": "wireit",
+    "prepublishOnly": "npm run build:css"
+  },
+  "wireit": {
+    "build:css": {
+      "command": "parcel build \"src/grail.scss\" \"src/shared.scss\" \"src/single.scss\" \"src/twin.scss\" \"src/standard.scss\" --dist-dir  \"dist\"",
+      "output": [
+        "./dist/**/*"
+      ],
+      "files": [
+        "./src/grail.scss",
+        "./src/shared.scss",
+        "./src/single.scss",
+        "./src/twin.scss",
+        "./src/standard.scss"
+      ]
+    }
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "wireit": "^0.9.5",
+    "lightningcss": "^1.19.0",
     "@microsoft/atlas-css": "^3.27.0",
     "@microsoft/atlas-js": "^1.5.4",
     "@parcel/transformer-sass": "^2.8.0",
     "parcel": "^2.8.0",
     "posthtml-include": "^1.7.4",
-    "rimraf": "^3.0.2",
     "@changesets/cli": "^2.26.1"
   }
 }

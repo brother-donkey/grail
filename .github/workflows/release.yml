@@ -28,6 +28,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Build CSS
+        run: npm run build:css
+
       # https://github.com/changesets/action
       - name: Publish on version increment
         uses: changesets/action@v1
@@ -38,3 +41,10 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Echo package contents
+        #
+        if: ${{ steps.changesets.outputs.published == 'true' }}
+        run: |
+          echo "Successfully published"
+          ls
