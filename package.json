@@ -11,7 +11,8 @@
     "url": "https://github.com/brother-donkey/grail"
   },
   "scripts": {
-    "start": "parcel \"./site/*.html\" --dist-dir \"site-dist\" --no-cache",
+    "start": "npm run build:site --watch",
+    "build:site": "wireit",
     "build:css": "wireit",
     "prepublishOnly": "npm run build:css"
   },
@@ -27,6 +28,17 @@
         "./src/single.scss",
         "./src/twin.scss",
         "./src/standard.scss"
+      ]
+    },
+    "build:site": {
+      "command": "parcel build \"./site/*.html\" --dist-dir \"site-dist\" --no-cache --no-optimize",
+      "output": [
+        "dist-site/**/*"
+      ],
+      "files": [
+        "**/*.html",
+        "**/*.scss",
+        "**/*.js"
       ]
     }
   },
