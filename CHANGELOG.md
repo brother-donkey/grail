@@ -1,5 +1,11 @@
 # grail-css
 
+## 0.0.14
+
+### Patch Changes
+
+- Include files property in package.json
+
 ## 0.0.13
 
 ### Patch Changes
