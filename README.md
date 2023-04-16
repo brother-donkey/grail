@@ -1,8 +1,8 @@
-# Grail Site Layouts with CSS
+# Grail Site Layouts using CSS
 
 ## Elements
 
-The consistuent elements of a given layout correspond to the semantic elements used on most websites. It's recommended but not required that for proper semantics, you match the classname with the html element (ex. `<main class="main">`). These elements and their corresponding elements are as follows:
+The constituent elements of a layout correspond to the semantic elements commonly used on most websites. It is recommended, but not required, to match the classname with the HTML element for proper semantics (e.g., `<main class="main">`). The following are the recommended elements and their corresponding classes:
 
 - `<html class="html">`
 - `<body class="body">`
@@ -10,19 +10,19 @@ The consistuent elements of a given layout correspond to the semantic elements u
 - `<aside class="aside">`
 - `<footer class="footer">`
 
-## Inner containers
+## Inner Containers
 
-It's recommended that you nest inner elements within each of the main elements on the page.
+It is recommended to nest inner elements within each of the main elements on the page.
 
-## Principals
+## Principles
 
-1. The same elements and contianers are used in all layouts. We cannot reason through layout change unless we keep things simple and consistent.
-2. Layouts are toggled only by changing the class on the containing element (generally, this is intended to be `html`).
-3. No elements are removed on any screen resolution. If you want to change a layout's position or remove it from a layout, it can be done with your custom styles.
-4. This package does not contain a css reset. You'll need to include your own.
+1. Consistent elements and containers are used in all layouts to keep things simple and manageable.
+2. Layouts are toggled only by changing the class on the containing element, typically the `html` tag.
+3. No elements are removed on any screen resolution. If you want to change the position or remove a layout, you can do so with your custom styles.
+4. This package does not include a CSS reset, so you will need to include your own.
 
 ## Layouts
 
 1. Single - a stacked layout on all screen sizes.
-2. Twin - a layout with two equal sized content containers (main, aside).
-3. Standard - a layout with one large centered container (main), and on desktop smaller lefthand (nav) and righthand (aside) containers
+2. Twin - a layout with two equally sized content containers (main, aside).
+3. Standard - a layout with one large centered container (main), and smaller left-hand (nav) and right-hand (aside) containers on desktop screens.
