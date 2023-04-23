@@ -6,6 +6,7 @@
     "dist",
     "src"
   ],
+  "homepage": "https://brother-donkey.github.io/grail/",
   "repository": {
     "type": "git",
     "url": "https://github.com/brother-donkey/grail"
