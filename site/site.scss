@@ -110,3 +110,11 @@ html {
     background-color: #fff;
   }
 }
+
+pre:has(code) {
+  border-radius: $border-radius-lg;
+}
+
+.word-break-break-all {
+  word-break: break-all;
+}

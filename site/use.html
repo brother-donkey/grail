@@ -10,30 +10,39 @@
   <body class="body outline-recursive">
     <include src="./site/includes/header.html"></include>
     <include src="./site/includes/modal-nav.html"></include>
-    <main id="layout-main" class="main">
+    <main id="layout-main" class="main overflow-hidden">
       <div class="markdown margin-top-md">
         <h1 class="font-weight-bold">Using grail-css</h1>
-        <p>TBD</p>
-        <h2>
-          Six elements, six classes of the same name, one layout class on the
-          html element and, voila, you're done!
-        </h2>
-        <p>
-          Here are the elements you need to remember. Header, footer, main, nav,
-          and aside. Grail's boilerplate looks looks like this.
+        <h2>Install and reference</h2>
+        <p class="margin-bottom-xxs">
+          For the greatest flexibility, install grail-css via npm ...
         </p>
-
         <pre
-          class="margin-block-md"
-        ><code>&lt;html class=&quot;layout-standard&quot;&gt;
-&lt;body class=&quot;body&quot;&gt;
-    &lt;header class=&quot;header&quot;&gt;&lt;/header&gt;
-    &lt;nav class=&quot;nav&quot;&gt;&lt;/nav&gt;
-    &lt;main class=&quot;main&quot;&gt;&lt;/main&gt;
-    &lt;aside class=&quot;aside&quot;&gt;&lt;/aside&gt;
-    &lt;footer class=&quot;footer&quot;&gt;&lt;/footer&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+          class="word-break-break-all"
+        ><code>npm install --save-dev grail-css</code></pre>
+        <p class="margin-block-xs">
+          Then reference the grail stylesheet in your own SCSS
+        </p>
+        <pre
+          class="word-break-break-all"
+        ><code>@import "/path/to/node_modules/grail-css/src/grail.scss";</code></pre>
+        <p class="margin-block-xs">
+          Only want one of the layouts? Reference that layout file specifically.
+        </p>
+        <pre><code>@import "../node_modules/grail-css/src/standard.scss";</code></pre>
+        <p class="margin-block-xs">
+          Prefer to reference plain CSS? Reference the dist folder, which
+          contains minified CSS.
+        </p>
+        <pre><code>@import "../node_modules/grail-css/dist/standard.css";</code></pre>
+        <p class="margin-block-xs">
+          Or reference this CSS from an
+          <a href="https://www.unpkg.com/">unpkg</a> url.
+        </p>
+        <pre><code>&#x3C;link rel=&#x22;stylesheet&#x22;href=&#x22;https://www.unpkg.com/grail-css/dist/grail.css&#x22;/&#x3E;</code></pre>
+        <h2>Markup and usage</h2>
+
+        <p></p>
       </div>
     </main>
     <include src="./site/includes/aside.html"></include>

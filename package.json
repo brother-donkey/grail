@@ -12,7 +12,8 @@
     "url": "https://github.com/brother-donkey/grail"
   },
   "scripts": {
-    "start": "npm run build:site --watch",
+    "start": "npm run serve:site --watch",
+    "serve:site": "wireit",
     "build:site": "wireit",
     "build:css": "wireit",
     "prepublishOnly": "npm run build:css"
@@ -31,8 +32,33 @@
         "./src/standard.scss"
       ]
     },
+    "serve:site": {
+      "command": "http-server \"./dist-site\" -c-1",
+      "service": {
+        "readyWhen": {
+          "lineMatches": "Hit CTRL-C to stop the server"
+        }
+      },
+      "dependencies": [
+        {
+          "script": "build:site:local",
+          "cascade": false
+        }
+      ]
+    },
     "build:site": {
-      "command": "parcel build \"./site/*.html\" --dist-dir \"dist-site\" --no-cache --no-optimize --public-url \"https://brother-donkey.github.io/grail/\"",
+      "command": "parcel build \"./site/*.html\" --dist-dir \"dist-site\" --no-cache --public-url \"https://brother-donkey.github.io/grail/\"",
+      "output": [
+        "dist-site/**/*"
+      ],
+      "files": [
+        "**/*.html",
+        "**/*.scss",
+        "**/*.js"
+      ]
+    },
+    "build:site:local": {
+      "command": "parcel build \"./site/*.html\" --dist-dir \"dist-site\" --no-cache --no-optimize --public-url .",
       "output": [
         "dist-site/**/*"
       ],
@@ -52,6 +78,7 @@
     "@microsoft/atlas-js": "^1.5.4",
     "@parcel/transformer-sass": "^2.8.0",
     "parcel": "^2.8.0",
+    "http-server": "^14.1.1",
     "posthtml-include": "^1.7.4",
     "@changesets/cli": "^2.26.1"
   }
