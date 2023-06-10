@@ -1,5 +1,9 @@
 # Grail Site Layouts using CSS
 
+[![npm version](https://badge.fury.io/js/grail-css.svg)](https://badge.fury.io/js/grail-css)
+
+[View documentation](https://brother-donkey.github.io/grail/)
+
 ## Elements
 
 The constituent elements of a layout correspond to the semantic elements commonly used on most websites. It is recommended, but not required, to match the classname with the HTML element for proper semantics (e.g., `<main class="main">`). The following are the recommended elements and their corresponding classes:
@@ -10,7 +14,7 @@ The constituent elements of a layout correspond to the semantic elements commonl
 - `<aside class="aside">`
 - `<footer class="footer">`
 
-## Inner Containers
+## Inner containers
 
 It is recommended to nest inner elements within each of the main elements on the page.
 
