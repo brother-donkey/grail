@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="html layout-standard">
+<html lang="en" class="html layout-single">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,21 +8,60 @@
     <link rel="stylesheet" href="./site.scss" />
   </head>
   <body class="body outline-recursive">
-    <include src="./site/includes/header.html"></include>
+    <include src="./site/includes/header-burger-all-widths.html"></include>
     <include src="./site/includes/modal-nav.html"></include>
 
     <main id="layout-main" class="main">
       <div class="markdown margin-top-md">
-        <h1 class="font-weight-bold">Breakpoints on Grail</h1>
+        <div class="margin-inline-auto reading-width">
+
+        <h1 class="font-weight-bold">Breakpoints</h1>
         <p>
-          <ul>
-            <li>list of default breakpoints/li>
-            <li>method of defining different breakpoints</li>
-            <li>todo:interpolated breakpoints in scss build</li>
-          </ul>
+          Grail uses a few predefined breakpoints. They can be found in src/variables.scss. They are as follows:
         </p>
+
+        <table class="margin-block-sm width-full scroll-horizontal">
+            <tr>
+              <th style="text-align: left">Value (px)</th>
+              <th style="text-align: left">Sass variable name</th>
+              <th style="text-align: left">Layout usage</th>
+            </tr>
+            <tr>
+              <td>768</td>
+              <td>$grail-breakpoint-narrow </td>
+              <td>standard, twin</td>
+            </tr>
+            <tr>
+              <td>1096</td>
+              <td>$grail-breakpoint-medium</td>
+              <td>standard</td>
+            </tr>
+            <tr>
+              <td>1400</td>
+              <td>$grail-breakpoint-large </td>
+              <td>standard</td>
+            </tr>
+            <tr>
+              <td>1600</td>
+              <td>$grail-breakpoint-extra-large </td>
+              <td>twin</td>
+            </tr>
+        </table>
+
+        <h2>Customizing your breakpoints</h2>
+
+        <p>Should you need to customize the value of any given breakpoint. You may do so by creating your own build of grail. To do this, start with the following code snippet, which makes use of the Sass <code>@use</code> rule to overrite the value of the narrow breakpoint.</p>
+
+        <pre
+          class="word-break-break-all"
+        ><code>@use "/path/to/node_modules/grail-css/src/variables.scss" with (
+  $grail-breakpoint-narrow: 900px
+);
+
+@import "/path/to/node_modules/grail-css/src/grail.scss";</code></pre>
+        
+      </div>
     </main>
-    <include src="./site/includes/nav.html"></include>
     <include src="./site/includes/footer.html"></include>
     <script src="./index.js" type="module"></script>
   </body>
