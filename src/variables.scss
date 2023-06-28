@@ -3,3 +3,9 @@ $side-bar-width-desktop: 260px !default;
 $side-bar-width-wide: 300px !default;
 $layout-gap-inline: var(--grail-layout-gap-inline) !default;
 $layout-gap-block: var(--grail-layout-gap-block) !default;
+
+// Grail breakpoints for overriding
+$grail-breakpoint-narrow: 768px !default;
+$grail-breakpoint-middle: 1096px !default;
+$grail-breakpoint-large: 1400px !default;
+$grail-breakpoint-extra-large: 1600px !default;

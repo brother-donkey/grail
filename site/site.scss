@@ -1,3 +1,5 @@
+@use "../src/variables.scss" as variables;
+
 @font-face {
   font-family: "Cascadia Code", Consolas, "Courier New", monospace;
   src: url("./CascadiaCode.ttf");
@@ -14,7 +16,7 @@ html {
   font-size: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: #{variables.$grail-breakpoint-narrow}) {
   nav .markdown {
     display: grid;
     grid-template-columns: 1fr;
