@@ -132,14 +132,22 @@
 
         <h2>Customizing your breakpoints</h2>
 
-        <p>Should you need to customize the value of any given breakpoint. You may do so by creating your own build of grail. To do this, start with the following code snippet, which makes use of the Sass <code>@use</code> rule to overrite the value of the narrow breakpoint.</p>
+        <p>Should you need to customize the value of any given breakpoint. You may do so by creating your own build of Grail. To do this, start with the following code snippet, which makes use of the Sass <code>@use</code> rule to overrite the value of the narrow breakpoint.</p>
 
-        <pre class="word-break-break-all"><code>@use "/path/to/node_modules/grail-css/src/variables.scss" with (
+        <pre class="word-break-break-all margin-top-md"><code>@use "/path/to/node_modules/grail-css/src/variables.scss" with (
   $grail-breakpoint-narrow: 900px
 );
 
 @import "/path/to/node_modules/grail-css/src/grail.scss";</code></pre>
-        
+         
+        <h2>Notes</h2>
+
+        <ul>
+          <li>Ensure your values still get larger from narrow to extra large.</li>
+          <li>Some variables are used on different layouts, so ensure you test on all layouts you're using.</li>
+          <li>CSS variables are no able to be used as values in media queries; this is the reason for a new build step.</li>
+          <li>Single does not use any breakpoints. It's just a stacked series of elements.</li>
+        </ul>
       </div>
     </div></main>
     <footer id="layout-footer" class="footer background-color-alternate padding-block-xxs margin-top-xl">
