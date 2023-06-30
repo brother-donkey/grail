@@ -32,35 +32,8 @@
 
 @import "/path/to/node_modules/grail-css/src/grail.scss";</code></pre>
 
-          <p>Using the above, all grail classes will begin with <code>mysite-</code>. For example: <code>layout-html</code>, <code>layout-body</code>, <code>layout-main</code></p>
+    <p>Using the above, all grail classes will begin with <code>layout-</code>. For example: <code>layout-html</code>, <code>layout-body</code>, <code>layout-main</code></p>
 
-      <p>See the following table for defaults, names, and directions.</p>
-
-      <div class="width-full scroll-horizontal margin-top-sm">
-        <table class="table font-size-sm">
-          <tr>
-            <th style="text-align: left">Default (rem)</th>
-            <th style="text-align: left">CSS Variable name</th>
-            <th style="text-align: left">Direction</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>--grail-layout-gap-inline</td>
-            <td>horizontal</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>--grail-layout-gap-block</td>
-            <td>Vertical</td>
-          </tr>
-        </table>
-      </div>
-      <h2>Do it yourself</h2>
-      <p>
-        You can apply gap values directly to the body element. This may not work
-        as well, especially if you're using containers nested in each of the
-        grail elements. If you opt for this route, you may want to set the Grail defaults (see previous section) to zero before you begin.
-      </p>
     </main>
     <include src="./site/includes/nav.html"></include>
     <include src="./site/includes/footer.html"></include>

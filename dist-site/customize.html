@@ -96,44 +96,21 @@
       <div class="markdown margin-top-md">
       <h1 class="font-weight-bold">Customize a Grail Build</h1>
       <p>
-        This page will list method of which you can customize a build of grail-css.
+        This page will list ways of customizing a build of grail-css.
       </p>
       <h2>Namingspacing classes</h2>
       <p>
-        If you have existing classes in use that conflict with those specified by Grail, then you can create a custom build by overwriting the <code>$grail-class-prefix</code> Sass variable 
+        If you have existing classes in use that conflict with those specified by Grail, then you can create a custom class prefix by overwriting the <code>$grail-class-prefix</code> Sass variable 
       </p>
-      <pre class="margin-top-sm"><code class="hljs-language-css">:root {
-  --grail-layout-gap-inline: 32px !important;
-  --grail-layout-gap-block: 8px !important;
-}</code></pre>
+ 
+      <pre class="word-break-break-all margin-top-md"><code class="hljs-language-scss">@use "/path/to/node_modules/grail-css/src/variables.scss" with (
+  $grail-class-prefix: 'layout-'
+);
 
-      <p>See the following table for defaults, names, and directions.</p>
+@import "/path/to/node_modules/grail-css/src/grail.scss";</code></pre>
 
-      <div class="width-full scroll-horizontal margin-top-sm">
-        <table class="table font-size-sm">
-          <tr>
-            <th style="text-align: left">Default (rem)</th>
-            <th style="text-align: left">CSS Variable name</th>
-            <th style="text-align: left">Direction</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>--grail-layout-gap-inline</td>
-            <td>horizontal</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>--grail-layout-gap-block</td>
-            <td>Vertical</td>
-          </tr>
-        </table>
-      </div>
-      <h2>Do it yourself</h2>
-      <p>
-        You can apply gap values directly to the body element. This may not work
-        as well, especially if you're using containers nested in each of the
-        grail elements. If you opt for this route, you may want to set the Grail defaults (see previous section) to zero before you begin.
-      </p>
+    <p>Using the above, all grail classes will begin with <code>layout-</code>. For example: <code>layout-html</code>, <code>layout-body</code>, <code>layout-main</code></p>
+
     </div></main>
     <nav id="layout-nav" class="nav display-none display-block-tablet">
 <div class="nav-menu display-none-tablet margin-block-xs reading-width margin-inline-auto padding-inline-md-desktop">
