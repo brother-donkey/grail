@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grail</title>
     <link rel="stylesheet" href="./site.scss" />
+    <link rel="stylesheet" href="./highlight.min.css" />
+    <script src="./highlight.min.js"></script>
   </head>
   <body class="body gap-2 outline-recursive">
     <include src="./site/includes/header-burger-all-widths.html"></include>
     <include src="./site/includes/modal-nav.html"></include>
-    <main id="layout-main" class="main">
+    <main id="layout-main" class="main overflow-hidden">
       <div class="markdown">
         <div class="margin-inline-auto reading-width">
           <h1 class="font-weight-bold">The single layout</h1>
@@ -26,8 +28,10 @@
               Note that by default all single containers are full width. This
               page uses a class to constrain the reading width of inner
               elements. Try
-              <code>document.querySelectorAll('.reading-width')</code> to see
-              them.
+              <code class="hljs-language-javascript"
+                >document.querySelectorAll('.reading-width')</code
+              >
+              to see them.
             </em>
           </p>
           <h2>When should I use the single layout?</h2>
@@ -60,7 +64,7 @@
      -->
           <pre
             class="margin-block-md"
-          ><code>&lt;html class=&quot;layout-single&quot;&gt;
+          ><code class="hljs-language-html">&lt;html class=&quot;layout-single&quot;&gt;
   &lt;body class=&quot;body&quot;&gt;
       &lt;header class=&quot;header&quot;&gt;&lt;/header&gt;
       &lt;nav class=&quot;nav&quot;&gt;&lt;/nav&gt;

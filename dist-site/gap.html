@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grail</title>
-    <link rel="stylesheet" href="breakpoints.cd625cc9.css">
+    <link rel="stylesheet" href="breakpoints.530b211d.css">
+    <link rel="stylesheet" href="breakpoints.b3f61a57.css">
+    <script src="breakpoints.9b9a03f9.js"></script>
   </head>
   <body class="body outline-recursive">
     <header id="layout-header" class="header border-bottom">
@@ -76,13 +78,10 @@
                 <a href="breakpoints.html">Breakpoints</a>
               </li>
               <li class="margin-bottom-xxs">
-                <a href="variables.html">Variables</a>
-              </li>
-              <li class="margin-bottom-xxs">
                 <a href="gap.html">Gap</a>
               </li>
               <li class="margin-bottom-xxs">
-                <a href="customization.html">Customization</a>
+                <a href="customize.html">Customize</a>
               </li>
             </ul>
           </li>
@@ -93,20 +92,49 @@
 </modal-element>
 
 
-    <main id="layout-main" class="main">
+    <main id="layout-main" class="main overflow-hidden">
       <div class="markdown margin-top-md">
-        <h1 class="font-weight-bold">Gap</h1>
-        <p>
-          The nav element can be tough nut to crack because it can be used in so
-          many ways. We often want it to be invisible on narrow screens, but
-          appear on larger ones. Some sites don't need one at all, while others
-          like to place breadcrumbs or secondary navigation in this spot. On
-          some layouts, it can morph between a horiontal and vertical alignment.
-          Phew!
-        </p>
-        <h2>So what is to be done with nav?</h2>
-        <p>TBD</p>
-       
+      <h1 class="font-weight-bold">Gap</h1>
+      <p>
+        Every site needs the ability to customize the horizontal and vertical distance between elements. You can plug in to Grail's CSS variables to do so, or you can attempt to customize individual elements (i.e. do it yourself).
+      </p>
+      <h2>Overwriting Grail's CSS variables</h2>
+      <p>
+        Grail exposes two CSS variables that you can overwrite to achieve the
+        look you want.
+      </p>
+      <pre class="margin-top-sm"><code class="hljs-language-css">:root {
+  --grail-layout-gap-inline: 32px !important;
+  --grail-layout-gap-block: 8px !important;
+}</code></pre>
+
+      <p>See the following table for defaults, names, and directions.</p>
+
+      <div class="width-full scroll-horizontal margin-top-sm">
+        <table class="table font-size-sm">
+          <tr>
+            <th style="text-align: left">Default (rem)</th>
+            <th style="text-align: left">CSS Variable name</th>
+            <th style="text-align: left">Direction</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>--grail-layout-gap-inline</td>
+            <td>horizontal</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>--grail-layout-gap-block</td>
+            <td>Vertical</td>
+          </tr>
+        </table>
+      </div>
+      <h2>Do it yourself</h2>
+      <p>
+        You can apply gap values directly to the body element. This may not work
+        as well, especially if you're using containers nested in each of the
+        grail elements. If you opt for this route, you may want to set the Grail defaults (see previous section) to zero before you begin.
+      </p>
     </div></main>
     <nav id="layout-nav" class="nav display-none display-block-tablet">
 <div class="nav-menu display-none-tablet margin-block-xs reading-width margin-inline-auto padding-inline-md-desktop">
@@ -128,7 +156,6 @@
           <div class="popover-content padding-none">
               <a class="button button-clear button-block justify-content-flex-start button-primary font-size-xs font-size-sm-desktop" href="nav.html">Nav</a>
               <a class="button button-clear button-block justify-content-flex-start button-primary font-size-xs font-size-sm-desktop" href="twin.html">Breakpoints</a>
-              <a class="button button-clear button-block justify-content-flex-start button-primary font-size-xs font-size-sm-desktop" href="twin.html">Variables</a>
               <a class="button button-clear button-block justify-content-flex-start button-primary font-size-xs font-size-sm-desktop" href="twin.html">Gap</a>
               <a class="button button-clear button-block justify-content-flex-start button-primary font-size-xs font-size-sm-desktop" href="twin.html">Containers</a>
               <a class="button button-clear button-block justify-content-flex-start button-primary font-size-xs font-size-sm-desktop" href="twin.html">Code blocks</a>
@@ -168,13 +195,10 @@
             <a href="breakpoints.html">Breakpoints</a>
           </li>
           <li class="margin-bottom-xxs">
-            <a href="variables.html">Variables</a>
-          </li>
-          <li class="margin-bottom-xxs">
             <a href="gap.html">Gap</a>
           </li>
           <li class="margin-bottom-xxs">
-            <a href="customization.html">Customization</a>
+            <a href="customize.html">Customize</a>
           </li>
         </ul>
       </li>
@@ -191,6 +215,6 @@
   </div>
 </footer>
 
-    <script src="breakpoints.d1f89d3c.js" type="module"></script>
+    <script src="breakpoints.62192ec8.js" type="module"></script>
   </body>
 </html>

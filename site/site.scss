@@ -36,6 +36,11 @@ html {
   }
 }
 
+.markdown pre {
+  background-color: transparent;
+  border-width: 4px;
+}
+
 .reading-width {
   max-width: 60ch;
   padding: var(--grail-layout-gap-inline);
@@ -119,4 +124,8 @@ pre:has(code) {
 
 .word-break-break-all {
   word-break: break-all;
+}
+:root {
+  --grail-layout-gap-inline: 64px !important;
+  --grail-layout-gap-block: 8px !important;
 }

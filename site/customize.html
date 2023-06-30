@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grail</title>
+    <title>Customize a Grail Build | grail-css layouts</title>
     <link rel="stylesheet" href="./site.scss" />
     <link rel="stylesheet" href="./highlight.min.css" />
     <script src="./highlight.min.js"></script>
@@ -15,19 +15,24 @@
 
     <main id="layout-main" class="main overflow-hidden">
       <div class="markdown margin-top-md">
-      <h1 class="font-weight-bold">Gap</h1>
+      <h1 class="font-weight-bold">Customize a Grail Build</h1>
       <p>
-        Every site needs the ability to customize the horizontal and vertical distance between elements. You can plug in to Grail's CSS variables to do so, or you can attempt to customize individual elements (i.e. do it yourself).
+        This page will list ways of customizing a build of grail-css.
       </p>
-      <h2>Overwriting Grail's CSS variables</h2>
+      <h2>Namingspacing classes</h2>
       <p>
-        Grail exposes two CSS variables that you can overwrite to achieve the
-        look you want.
+        If you have existing classes in use that conflict with those specified by Grail, then you can create a custom class prefix by overwriting the <code>$grail-class-prefix</code> Sass variable 
       </p>
-      <pre class="margin-top-sm"><code class="hljs-language-css">:root {
-  --grail-layout-gap-inline: 32px !important;
-  --grail-layout-gap-block: 8px !important;
-}</code></pre>
+ 
+      <pre
+          class="word-break-break-all margin-top-md"
+        ><code class="hljs-language-scss">@use "/path/to/node_modules/grail-css/src/variables.scss" with (
+  $grail-class-prefix: 'layout-'
+);
+
+@import "/path/to/node_modules/grail-css/src/grail.scss";</code></pre>
+
+          <p>Using the above, all grail classes will begin with <code>mysite-</code>. For example: <code>layout-html</code>, <code>layout-body</code>, <code>layout-main</code></p>
 
       <p>See the following table for defaults, names, and directions.</p>
 

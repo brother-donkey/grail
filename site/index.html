@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grail</title>
     <link rel="stylesheet" href="./site.scss" />
+    <link rel="stylesheet" href="./highlight.min.css" />
+    <script src="./highlight.min.js"></script>
   </head>
   <body class="body outline-recursive">
     <include src="./site/includes/header.html"></include>
-    <main id="layout-main" class="main">
+    <main id="layout-main" class="main overflow-hidden">
       <include src="./site/includes/modal-nav.html"></include>
       <div class="markdown margin-top-md">
         <h1 class="font-weight-bold">
@@ -40,7 +42,7 @@
         -->
         <pre
           class="margin-block-md"
-        ><code>&lt;html class=&quot;layout-standard&quot;&gt;
+        ><code class="hljs-language-html">&lt;html class=&quot;layout-standard&quot;&gt;
 &lt;body class=&quot;body&quot;&gt;
     &lt;header class=&quot;header&quot;&gt;&lt;/header&gt;
     &lt;nav class=&quot;nav&quot;&gt;&lt;/nav&gt;
@@ -50,7 +52,7 @@
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
         <h2>How do I get started?</h2>
-        <p>Visit the <a href="./use.html">use section</a> for next steps.</p>
+        <p>See <a href="./use.html">Getting Started</a> for next steps.</p>
       </div>
     </main>
     <include src="./site/includes/aside.html"></include>

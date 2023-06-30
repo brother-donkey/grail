@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grail</title>
-    <link rel="stylesheet" href="breakpoints.cd625cc9.css">
+    <link rel="stylesheet" href="breakpoints.530b211d.css">
+    <link rel="stylesheet" href="breakpoints.b3f61a57.css">
+    <script src="breakpoints.9b9a03f9.js"></script>
   </head>
   <body class="body outline-recursive">
     <header id="layout-header" class="header border-bottom">
@@ -76,13 +78,10 @@
                 <a href="breakpoints.html">Breakpoints</a>
               </li>
               <li class="margin-bottom-xxs">
-                <a href="variables.html">Variables</a>
-              </li>
-              <li class="margin-bottom-xxs">
                 <a href="gap.html">Gap</a>
               </li>
               <li class="margin-bottom-xxs">
-                <a href="customization.html">Customization</a>
+                <a href="customize.html">Customize</a>
               </li>
             </ul>
           </li>
@@ -93,8 +92,8 @@
 </modal-element>
 
 
-    <main id="layout-main" class="main">
-      <div class="markdown margin-top-md">
+    <main id="layout-main" class="main overflow-hidden">
+      <div class="markdown">
         <div class="margin-inline-auto reading-width">
 
         <h1 class="font-weight-bold">Breakpoints</h1>
@@ -102,39 +101,41 @@
           Grail uses a few predefined breakpoints. They can be found in src/variables.scss. They are as follows:
         </p>
 
-        <table class="margin-block-sm width-full scroll-horizontal">
-            <tr>
-              <th style="text-align: left">Value (px)</th>
-              <th style="text-align: left">Sass variable name</th>
-              <th style="text-align: left">Layout usage</th>
-            </tr>
-            <tr>
-              <td>768</td>
-              <td>$grail-breakpoint-narrow </td>
-              <td>standard, twin</td>
-            </tr>
-            <tr>
-              <td>1096</td>
-              <td>$grail-breakpoint-medium</td>
-              <td>standard</td>
-            </tr>
-            <tr>
-              <td>1400</td>
-              <td>$grail-breakpoint-large </td>
-              <td>standard</td>
-            </tr>
-            <tr>
-              <td>1600</td>
-              <td>$grail-breakpoint-extra-large </td>
-              <td>twin</td>
-            </tr>
-        </table>
+        <div class="width-full scroll-horizontal margin-top-sm">
+          <table class="table font-size-sm ">
+              <tr>
+                <th style="text-align: left">Value (px)</th>
+                <th style="text-align: left">Sass variable name</th>
+                <th style="text-align: left">Layout usage</th>
+              </tr>
+              <tr>
+                <td>768</td>
+                <td>$grail-breakpoint-narrow </td>
+                <td>standard, twin</td>
+              </tr>
+              <tr>
+                <td>1096</td>
+                <td>$grail-breakpoint-medium</td>
+                <td>standard</td>
+              </tr>
+              <tr>
+                <td>1400</td>
+                <td>$grail-breakpoint-large </td>
+                <td>standard</td>
+              </tr>
+              <tr>
+                <td>1600</td>
+                <td>$grail-breakpoint-extra-large </td>
+                <td>twin</td>
+              </tr>
+          </table>
+        </div>
 
         <h2>Customizing your breakpoints</h2>
 
-        <p>Should you need to customize the value of any given breakpoint. You may do so by creating your own build of Grail. To do this, start with the following code snippet, which makes use of the Sass <code>@use</code> rule to overrite the value of the narrow breakpoint.</p>
+        <p>Should you need to customize the value of any given breakpoint. You may do so by creating your own build of Grail. To do this, start with the following code snippet, which makes use of the Sass <code class="hljs-language-scss">@use</code> rule to overrite the value of the narrow breakpoint.</p>
 
-        <pre class="word-break-break-all margin-top-md"><code>@use "/path/to/node_modules/grail-css/src/variables.scss" with (
+        <pre class="word-break-break-all margin-top-md"><code class="hljs-language-scss">@use "/path/to/node_modules/grail-css/src/variables.scss" with (
   $grail-breakpoint-narrow: 900px
 );
 
@@ -144,8 +145,8 @@
 
         <ul>
           <li>Ensure your values still get larger from narrow to extra large.</li>
-          <li>Some variables are used on different layouts, so ensure you test on all layouts you're using.</li>
-          <li>CSS variables are no able to be used as values in media queries; this is the reason for a new build step.</li>
+          <li>Some variables are used on different layouts, so ensure you test on all layouts you're using when using a custom breakpoint.</li>
+          <li>CSS variables cannot be used as values in media queries; this is the reason for a scss build step.</li>
           <li>Single does not use any breakpoints. It's just a stacked series of elements.</li>
         </ul>
       </div>
@@ -159,6 +160,6 @@
   </div>
 </footer>
 
-    <script src="breakpoints.d1f89d3c.js" type="module"></script>
+    <script src="breakpoints.62192ec8.js" type="module"></script>
   </body>
 </html>

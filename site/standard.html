@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grail</title>
     <link rel="stylesheet" href="./site.scss" />
+    <link rel="stylesheet" href="./highlight.min.css" />
+    <script src="./highlight.min.js"></script>
   </head>
   <body class="body outline-recursive">
     <include src="./site/includes/header.html"></include>
     <include src="./site/includes/modal-nav.html"></include>
 
-    <main id="layout-main" class="main">
+    <main id="layout-main" class="main overflow-hidden">
       <div class="markdown margin-top-md">
         <h1 class="font-weight-bold">The standard layout</h1>
         <p>
@@ -45,7 +47,7 @@
    -->
         <pre
           class="margin-block-md"
-        ><code>&lt;html class=&quot;layout-standard&quot;&gt;
+        ><code class="hljs-language-html">&lt;html class=&quot;layout-standard&quot;&gt;
 &lt;body class=&quot;body&quot;&gt;
     &lt;header class=&quot;header&quot;&gt;&lt;/header&gt;
     &lt;nav class=&quot;nav&quot;&gt;&lt;/nav&gt;
