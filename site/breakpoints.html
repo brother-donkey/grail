@@ -1,21 +1,21 @@
+
 <!DOCTYPE html>
-<html lang="en" class="html layout-single">
+<html lang="en" class="html layout-standard">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grail</title>
+    <title>Breakpoints | grail-css layouts</title>
     <link rel="stylesheet" href="./site.scss" />
     <link rel="stylesheet" href="./highlight.min.css" />
     <script src="./highlight.min.js"></script>
   </head>
   <body class="body outline-recursive">
-    <include src="./site/includes/header-burger-all-widths.html"></include>
+    <include src="./site/includes/header.html"></include>
     <include src="./site/includes/modal-nav.html"></include>
 
     <main id="layout-main" class="main overflow-hidden">
-      <div class="markdown">
-        <div class="margin-inline-auto reading-width">
+      <div class="markdown margin-top-md">
 
         <h1 class="font-weight-bold">Breakpoints</h1>
         <p>
@@ -72,8 +72,8 @@
           <li>CSS variables cannot be used as values in media queries; this is the reason for a scss build step.</li>
           <li>Single does not use any breakpoints. It's just a stacked series of elements.</li>
         </ul>
-      </div>
     </main>
+    <include src="./site/includes/nav.html"></include>
     <include src="./site/includes/footer.html"></include>
     <script src="./index.js" type="module"></script>
   </body>

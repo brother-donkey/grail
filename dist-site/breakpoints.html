@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
-<html lang="en" class="html layout-single">
+<html lang="en" class="html layout-standard">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grail</title>
-    <link rel="stylesheet" href="breakpoints.530b211d.css">
+    <title>Breakpoints | grail-css layouts</title>
+    <link rel="stylesheet" href="breakpoints.bd845b5a.css">
     <link rel="stylesheet" href="breakpoints.b3f61a57.css">
     <script src="breakpoints.9b9a03f9.js"></script>
   </head>
@@ -18,18 +19,18 @@
     </div>
 
     <div class="align-self-stretch display-flex align-items-center flex-wrap-nowrap">
-      <a href="/" class="button button-clear" aria-label="grail-css on npm">
+      <a href="https://www.npmjs.com/package/grail-css" class="button button-clear" aria-label="grail-css on npm">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32px" height="32px">
           <path fill="#d50000" d="M0,15h48v17H24v3H13v-3H0V15z"></path>
           <path fill="#fff" d="M3 29L8 29 8 21 11 21 11 29 13 29 13 18 3 18zM16 18v14h5v-3h5V18H16zM24 26h-3v-5h3V26zM29 18L29 29 34 29 34 21 37 21 37 29 40 29 40 21 43 21 43 29 45 29 45 18z"></path>
         </svg>
       </a>
-      <a href="/" class="button button-clear" aria-label="grail-css on github">
+      <a href="https://github.com/brother-donkey/grail" class="button button-clear" aria-label="grail-css on github">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current-color color-text">
           <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
         </svg>
       </a>
-      <modal-trigger for="site-name-modal" class="z-index-101">
+      <modal-trigger for="site-name-modal" class="z-index-101 display-none-tablet">
         <button class="burger margin-inline-xxs" aria-label="Mobile menu toggle">
           <span class="burger-top"></span>
           <span class="burger-middle"></span>
@@ -52,7 +53,7 @@
             <a href="index.html">Overview</a>
           </li>
           <li class="margin-bottom-xxs">
-            <a href="use.html">Use</a>
+            <a href="getting-started.html">Use</a>
           </li>
           <li class="margin-block-xxs">
             <span>Layouts</span>
@@ -93,8 +94,7 @@
 
 
     <main id="layout-main" class="main overflow-hidden">
-      <div class="markdown">
-        <div class="margin-inline-auto reading-width">
+      <div class="markdown margin-top-md">
 
         <h1 class="font-weight-bold">Breakpoints</h1>
         <p>
@@ -149,8 +149,77 @@
           <li>CSS variables cannot be used as values in media queries; this is the reason for a scss build step.</li>
           <li>Single does not use any breakpoints. It's just a stacked series of elements.</li>
         </ul>
-      </div>
     </div></main>
+    <nav id="layout-nav" class="nav display-none display-block-tablet">
+<div class="nav-menu display-none-tablet margin-block-xs reading-width margin-inline-auto padding-inline-md-desktop">
+    <a class="button button-block justify-content-flex-start button-clear button-primary font-size-xs font-size-sm-desktop" href="index.html">Overview</a>
+    <a class="button button-block justify-content-flex-start button-clear button-primary font-size-xs font-size-sm-desktop" href="getting-started.html">Use</a>
+      <details class="popover display-block">
+        <summary class="button button-block justify-content-flex-start button-clear font-size-xs font-size-sm-desktop">
+          Layouts
+        </summary>
+
+        <div class="popover-content padding-none display-block">
+            <a class="button justify-content-flex-start button-block button-clear button-primary font-size-xs font-size-sm-desktop flex-grow-1" href="standard.html">Standard</a>
+            <a class="button justify-content-flex-start button-block button-clear button-primary font-size-xs font-size-sm-desktop flex-grow-1" href="twin.html">Twin</a>
+            <a class="button justify-content-flex-start button-block button-clear button-primary font-size-xs font-size-sm-desktop flex-grow-1" href="single.html">Single</a>
+          </div>
+      </details>
+      <details class="popover display-block">
+          <summary class="button button-block justify-content-flex-start button-clear font-size-xs font-size-sm-desktop">Tips</summary>
+          <div class="popover-content padding-none">
+              <a class="button button-clear button-block justify-content-flex-start button-primary font-size-xs font-size-sm-desktop" href="nav.html">Nav</a>
+              <a class="button button-clear button-block justify-content-flex-start button-primary font-size-xs font-size-sm-desktop" href="twin.html">Breakpoints</a>
+              <a class="button button-clear button-block justify-content-flex-start button-primary font-size-xs font-size-sm-desktop" href="twin.html">Gap</a>
+              <a class="button button-clear button-block justify-content-flex-start button-primary font-size-xs font-size-sm-desktop" href="twin.html">Containers</a>
+              <a class="button button-clear button-block justify-content-flex-start button-primary font-size-xs font-size-sm-desktop" href="twin.html">Code blocks</a>
+          </div>
+      </details>
+    </div>
+  
+  <div class="display-none display-block-tablet markdown padding-left-sm margin-top-md-tablet">
+    <ul class="margin-none parent-list">
+      <li class="margin-bottom-xxs">
+        <a href="index.html">Overview</a>
+      </li>
+      <li class="margin-bottom-xxs">
+        <a href="getting-started.html">Use</a>
+      </li>
+      <li class="margin-block-xxs">
+        <span>Layouts</span>
+        <ul class="margin-left-xs margin-top-xxs">
+          <li class="margin-bottom-xxs">
+            <a href="standard.html">Standard</a>
+          </li>
+          <li class="margin-bottom-xxs">
+            <a href="twin.html">Twin</a>
+          </li>
+          <li class="margin-bottom-xxs">
+            <a href="single.html">Single</a>
+          </li>
+        </ul>
+      </li>
+      <li class="margin-block-xxs">
+        <span>Tips</span>
+        <ul class="margin-left-xs margin-top-xxs">
+          <li class="margin-bottom-xxs">
+            <a href="nav.html">Nav</a>
+          </li>
+          <li class="margin-bottom-xxs">
+            <a href="breakpoints.html">Breakpoints</a>
+          </li>
+          <li class="margin-bottom-xxs">
+            <a href="gap.html">Gap</a>
+          </li>
+          <li class="margin-bottom-xxs">
+            <a href="customize.html">Customize</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
     <footer id="layout-footer" class="footer background-color-alternate padding-block-xxs margin-top-xl">
   <div class="color-text-invert">
     <p class="font-weight-semibold font-size-xs">

@@ -6689,7 +6689,7 @@ html.debug .outline-recursive, html.debug .outline-recursive * {
 .html {
   min-height: 100vh;
   width: 100vw;
-  --grail-layout-gap-inline: 2rem;
+  --grail-layout-gap-inline: 1rem;
   --grail-layout-gap-block: 1rem;
   flex-direction: column;
   display: flex;
@@ -6951,9 +6951,4 @@ pre:has(code) {
   word-break: break-all;
 }
 
-:root {
-  --grail-layout-gap-inline: 64px !important;
-  --grail-layout-gap-block: 8px !important;
-}
-
-/*# sourceMappingURL=breakpoints.530b211d.css.map */
+/*# sourceMappingURL=breakpoints.bd845b5a.css.map */

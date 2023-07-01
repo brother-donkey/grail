@@ -125,7 +125,10 @@ pre:has(code) {
 .word-break-break-all {
   word-break: break-all;
 }
-:root {
-  --grail-layout-gap-inline: 64px !important;
-  --grail-layout-gap-block: 8px !important;
-}
+
+// layout gaps can be customized with the following:
+
+// :root {
+//   --grail-layout-gap-inline: 64px !important;
+//   --grail-layout-gap-block: 8px !important;
+// }

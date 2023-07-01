@@ -1,39 +1,61 @@
 <!DOCTYPE html>
-<html lang="en" class="html layout-single">
+<html lang="en" class="html layout-standard">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grail</title>
+    <title>Nav | grail-css layouts</title>
     <link rel="stylesheet" href="./site.scss" />
     <link rel="stylesheet" href="./highlight.min.css" />
     <script src="./highlight.min.js"></script>
   </head>
   <body class="body outline-recursive">
-    <include src="./site/includes/header-burger-all-widths.html"></include>
+    <include src="./site/includes/header.html"></include>
     <include src="./site/includes/modal-nav.html"></include>
 
     <main id="layout-main" class="main overflow-hidden">
-      <div class="markdown">
-        <div class="margin-inline-auto reading-width">
-
-        <h1 class="font-weight-bold">Navigating the <code>nav</code> element</h1>
+      <div class="markdown margin-top-md">
+        <h1 class="font-weight-bold">
+          Navigating the <code>nav</code> element
+        </h1>
         <p>
           The nav element can be tough nut to crack because it can be used in so
           many ways. We often want it to be invisible on narrow screens, but
           appear on larger ones. Some sites don't need one at all, while others
           like to place breadcrumbs or secondary navigation in this spot. On
-          some layouts, it can morph between a horizontal and vertical alignment.
-          Phew!
+          some layouts, it can morph between a horizontal and vertical
+          alignment. Phew!
         </p>
         <h2>What's the trouble with it?</h2>
-        <p>How we use the <code>nav</code> element depends heavily on our site's design. There are many possible use cases: show breadcrumbs, a navigation element, show just a few links, show a search bar, entirely up to you. The issue with nav is that what works on one screensize may not work well with another. That is why it's recommended you simply hide it on screens where you feel it doesn't make sense; then you can replace it with a separate element that is more friendly to your particular design. The <code>nav</code> element/class isn't required, so whatever layout you use it should work fine without it.</p>
+        <p>
+          How we use the <code>nav</code> element depends heavily on our site's
+          design. There are many possible use cases: show breadcrumbs, a
+          navigation element, show just a few links, show a search bar, entirely
+          up to you. The issue with nav is that what works on one screensize may
+          not work well with another. That is why it's recommended you simply
+          hide it on screens where you feel it doesn't make sense; then you can
+          replace it with a separate element that is more friendly to your
+          particular design. The <code>nav</code> element/class isn't required,
+          so whatever layout you use it should work fine without it.
+        </p>
         <h2>Consistency</h2>
-        <p>Be careful to be as consistent as you can in your treatment, so that if your site uses multiple different layouts, your users can easily grasp their similarities. This page, for example, extends the mobile hamburger pattern to all widths, rather than placing a cluttered nav element below the header and atop the content.</p>
+        <p>
+          Be careful to be as consistent as you can in your treatment, so that
+          if your site uses multiple different layouts, your users can easily
+          grasp their similarities.
+        </p>
         <h2>Rendering different containers on different screensizes</h2>
-        <p>Another possible approach is displaying entirely different experiences in the <code>nav</code> on different screensizes. Mileage here may vary, because it can be difficult to fit a good experience into the <code>nav</code> on narrow screens without the element growing very tall. You don't want too much between the user and the most important thing on the page. The meat and potatoes! The content!</p>
+        <p>
+          Another possible approach is displaying entirely different experiences
+          in the <code>nav</code> on different screensizes. Mileage here may
+          vary, because it can be difficult to fit a good experience into the
+          <code>nav</code> on narrow screens without the element growing very
+          tall. You don't want too much between the user and the most important
+          thing on the page. The meat and potatoes! The content!
+        </p>
       </div>
     </main>
+    <include src="./site/includes/nav.html"></include>
     <include src="./site/includes/footer.html"></include>
     <script src="./index.js" type="module"></script>
   </body>
