@@ -581,8 +581,7 @@ function $c361dea830e4f878$var$handleSubmitButtonAction(event) {
 
 
 $e9274bcb6dcba339$export$7ae0af140e650b26();
-// script should be in head
-hljs.highlightAll();
+if (hljs) hljs.highlightAll();
 document.addEventListener("keydown", (e)=>{
     if (e.ctrlKey || e.metaKey) document.documentElement.classList.add("debug");
 });
@@ -654,4 +653,4 @@ window.addEventListener("click", (e)=>{
 });
 
 
-//# sourceMappingURL=breakpoints.62192ec8.js.map
+//# sourceMappingURL=breakpoints.50f20e24.js.map

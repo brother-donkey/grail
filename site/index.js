@@ -3,8 +3,9 @@
 const atlasJs = require("@microsoft/atlas-js");
 atlasJs.initPopover();
 
-// script should be in head
-hljs.highlightAll();
+if (hljs) {
+  hljs.highlightAll();
+}
 
 document.addEventListener("keydown", (e) => {
   if (e.ctrlKey || e.metaKey) {
