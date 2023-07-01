@@ -1,0 +1,310 @@
+html.debug .main, html.debug .nav, html.debug .aside, html.debug .header, html.debug .footer {
+  position: relative;
+}
+
+html.debug .main:after, html.debug .nav:after, html.debug .header:after, html.debug .footer:after, html.debug .aside:after {
+  color: #fff;
+  background-color: gray;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding-block: 2px;
+  padding-inline: 4px;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+}
+
+html.debug .nav:after {
+  content: ".nav";
+}
+
+html.debug .main:after {
+  content: ".main";
+}
+
+html.debug .aside:after {
+  content: ".aside";
+}
+
+html.debug .sidebar:after {
+  content: ".sidebar";
+}
+
+html.debug .header:after {
+  content: ".header";
+}
+
+html.debug .footer:after {
+  content: ".footer";
+}
+
+html.debug .border-recursive, html.debug .border-recursive * {
+  border: 1px dashed #fff;
+}
+
+html.layout-twin .body {
+  flex-grow: 1;
+  overflow-x: hidden;
+}
+
+html.layout-twin .main {
+  padding-inline: var(--grail-layout-gap-inline) calc(var(--grail-layout-gap-inline)  / 2);
+  padding-block: var(--grail-layout-gap-block);
+  background-color: inherit;
+  grid-area: main;
+}
+
+html.layout-twin .aside {
+  padding-inline: calc(var(--grail-layout-gap-inline)  / 2) var(--grail-layout-gap-inline);
+  padding-block: var(--grail-layout-gap-block);
+  grid-area: aside;
+}
+
+html.layout-twin .nav {
+  padding-inline: var(--grail-layout-gap-inline);
+  padding-block: var(--grail-layout-gap-block);
+  max-width: 260px;
+  grid-area: main;
+}
+
+@media screen and (min-width: 1600px) {
+  html.layout-twin .nav {
+    max-width: unset;
+    grid-area: nav;
+  }
+}
+
+html.layout-twin .header {
+  padding-inline: var(--grail-layout-gap-inline);
+  grid-area: header;
+}
+
+html.layout-twin .footer {
+  padding-inline: var(--grail-layout-gap-inline);
+  padding-block: var(--grail-layout-gap-block);
+  grid-area: footer;
+}
+
+html.layout-twin .body {
+  grid-template: "header"
+                 "nav"
+                 "main" 1fr
+                 "aside"
+                 "footer"
+                 / 1fr;
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  html.layout-twin .body {
+    grid-template: "header header"
+                   "main aside" 1fr
+                   "footer footer"
+                   / 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  html.layout-twin .body {
+    grid-template: "header header header"
+                   "nav main aside" 1fr
+                   "footer footer footer"
+                   / 300px 1fr 1fr;
+  }
+}
+
+html.html {
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+}
+
+html.layout-standard .body {
+  flex-grow: 1;
+  overflow-x: hidden;
+}
+
+html.layout-standard .main {
+  grid-area: main;
+}
+
+html.layout-standard .aside {
+  grid-area: aside;
+}
+
+html.layout-standard .nav {
+  grid-area: nav;
+}
+
+html.layout-standard .header {
+  grid-area: header;
+}
+
+html.layout-standard .footer {
+  grid-area: footer;
+}
+
+html.layout-standard .body {
+  grid-template: "header"
+                 "nav"
+                 "main" 1fr
+                 "aside"
+                 "footer"
+                 / 1fr;
+  display: grid;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  html.layout-standard .body {
+    grid-template: "header header" 1fr
+                   "nav main" 1fr
+                   "nav aside"
+                   "footer footer"
+                   / 300px 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  html.layout-standard .body {
+    grid-template: "header header header" 1fr
+                   "nav main aside" 1fr
+                   "footer footer footer"
+                   / 260px 1fr 260px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  html.layout-standard .body {
+    grid-template: "header header header" 1fr
+                   "nav main aside" 1fr
+                   "footer footer footer"
+                   / 300px 1fr 300px;
+  }
+}
+
+html.layout-standard .header, html.layout-standard .main, html.layout-standard .layout, html.layout-standard .footer, html.layout-standard .aside, html.layout-standard .nav {
+  padding-inline: var(--grail-layout-gap-inline);
+  padding-block: var(--grail-layout-gap-block);
+}
+
+html.layout-standard .body {
+  flex-grow: 1;
+  overflow-x: hidden;
+}
+
+html.layout-standard .main {
+  grid-area: main;
+  overflow-x: hidden;
+}
+
+html.layout-standard .aside {
+  grid-area: aside;
+}
+
+html.layout-standard .nav {
+  grid-area: nav;
+}
+
+html.layout-standard .header {
+  grid-area: header;
+}
+
+html.layout-standard .footer {
+  grid-area: footer;
+}
+
+html.layout-standard .body {
+  grid-template: "header"
+                 "nav"
+                 "main" 1fr
+                 "aside"
+                 "footer"
+                 / 1fr;
+  display: grid;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  html.layout-standard .body {
+    grid-template: "header header"
+                   "nav main" 1fr
+                   "nav aside"
+                   "footer footer"
+                   / 260px 1fr;
+  }
+}
+
+@media screen and (min-width: 1088px) {
+  html.layout-standard .body {
+    grid-template: "header header header"
+                   "nav main aside" 1fr
+                   "footer footer footer"
+                   / 260px 1fr 260px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  html.layout-standard .body {
+    grid-template: "header header header header header"
+                   ". nav main aside ." 1fr
+                   "footer footer footer footer footer"
+                   / auto 300px 768px 300px auto;
+  }
+}
+
+html.layout-single .body {
+  flex-grow: 1;
+  overflow-x: hidden;
+}
+
+html.layout-single .main {
+  padding-inline: var(--grail-layout-gap-inline);
+  padding-block: var(--grail-layout-gap-block);
+  background-color: inherit;
+  grid-area: main;
+}
+
+html.layout-single .aside {
+  padding-inline: var(--grail-layout-gap-inline);
+  padding-block: var(--grail-layout-gap-block);
+  grid-area: aside;
+}
+
+html.layout-single .nav {
+  padding-inline: var(--grail-layout-gap-inline);
+  padding-block: var(--grail-layout-gap-block);
+  grid-area: nav;
+}
+
+html.layout-single .header {
+  padding-inline: var(--grail-layout-gap-inline);
+  grid-area: header;
+}
+
+html.layout-single .footer {
+  padding-inline: var(--grail-layout-gap-inline);
+  padding-block: var(--grail-layout-gap-block);
+  grid-area: footer;
+}
+
+html.layout-single .body {
+  grid-template: "header"
+                 "nav"
+                 "main" 1fr
+                 "aside"
+                 "footer"
+                 / 1fr;
+  display: grid;
+}
+
+html {
+  --grail-layout-gap-inline: 0rem;
+  --grail-layout-gap-block: 0rem;
+  --sidebars-width: 280px;
+  --sidebars-width-wide: 350px;
+  --desktop-query: var(--main-column-width)  + var(--sidebars-width)  * 2;
+  box-sizing: border-box !important;
+}
+
+/*# sourceMappingURL=index.142d4dd8.css.map */

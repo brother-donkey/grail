@@ -1,4 +1,4 @@
-site-dist
+dist-site
 node_modules
 dist
 .parcel-cache

@@ -1,0 +1,198 @@
+html.debug .main, html.debug .nav, html.debug .aside, html.debug .header, html.debug .footer {
+  position: relative;
+}
+
+html.debug .main:after, html.debug .nav:after, html.debug .header:after, html.debug .footer:after, html.debug .aside:after {
+  color: #fff;
+  background-color: #483d8b;
+  border-radius: 4px;
+  outline: 1px solid #00008b;
+  padding-block: 2px;
+  padding-inline: 4px;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+}
+
+html.debug .nav:after {
+  content: ".nav";
+}
+
+html.debug .main:after {
+  content: ".main";
+}
+
+html.debug .aside:after {
+  content: ".aside";
+}
+
+html.debug .sidebar:after {
+  content: ".sidebar";
+}
+
+html.debug .header:after {
+  content: ".header";
+}
+
+html.debug .footer:after {
+  content: ".footer";
+}
+
+html.debug .outline-recursive, html.debug .outline-recursive * {
+  outline: 1px dashed #00008b;
+}
+
+.html {
+  height: 100vh;
+  width: 100vw;
+  --grail-layout-gap-inline: 2rem;
+  --grail-layout-gap-block: 1.5rem;
+  flex-direction: column;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.body, .footer {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.body {
+  flex-grow: 1;
+  overflow-x: hidden;
+}
+
+.main {
+  grid-area: main;
+}
+
+.aside {
+  grid-area: aside;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.header {
+  grid-area: header;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.layout-single .main {
+  padding-inline: var(--grail-layout-gap-inline);
+  background-color: inherit;
+}
+
+.layout-single .aside, .layout-single .nav, .layout-single .header, .layout-single .footer {
+  padding-inline: var(--grail-layout-gap-inline);
+}
+
+.layout-single .body {
+  grid-template: "header"
+                 "nav"
+                 "main" 1fr
+                 "aside"
+                 "footer"
+                 / 1fr;
+  display: grid;
+}
+
+.layout-twin .header, .layout-twin .footer, .layout-twin .nav {
+  padding-inline: var(--grail-layout-gap-inline);
+}
+
+.layout-twin .main {
+  padding-inline: var(--grail-layout-gap-inline) calc(var(--grail-layout-gap-inline)  / 2);
+  background-color: inherit;
+}
+
+.layout-twin .aside {
+  padding-inline: calc(var(--grail-layout-gap-inline)  / 2) var(--grail-layout-gap-inline);
+}
+
+.layout-twin .body {
+  grid-template: "header"
+                 "nav"
+                 "main" 1fr
+                 "aside"
+                 "footer"
+                 / 1fr;
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .layout-twin .body {
+    grid-template: "header header"
+                   "nav nav"
+                   "main aside" 1fr
+                   "footer footer"
+                   / 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .layout-twin .body {
+    grid-template: "header header header"
+                   "nav main aside" 1fr
+                   "footer footer footer"
+                   / 300px 1fr 1fr;
+  }
+}
+
+.layout-standard .header, .layout-standard .main, .layout-standard .layout, .layout-standard .footer, .layout-standard .aside, .layout-standard .nav {
+  padding-inline: var(--grail-layout-gap-inline);
+}
+
+.layout-standard .body {
+  grid-template: "header"
+                 "nav"
+                 "main" 1fr
+                 "aside"
+                 "footer"
+                 / 1fr;
+  display: grid;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .layout-standard .body {
+    grid-template: "header header"
+                   "nav main" 1fr
+                   "nav aside"
+                   "footer footer"
+                   / 260px 1fr;
+  }
+}
+
+@media screen and (min-width: 1096px) {
+  .layout-standard .body {
+    grid-template: "header header header"
+                   "nav main aside" 1fr
+                   "footer footer footer"
+                   / 260px 1fr 260px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .layout-standard .body {
+    grid-template: "header header header header header"
+                   ". nav main aside ." 1fr
+                   "footer footer footer footer footer"
+                   / auto 300px 768px 300px auto;
+  }
+}
+
+html {
+  --grail-layout-gap-inline: 0rem;
+  --grail-layout-gap-block: 0rem;
+  --sidebars-width: 280px;
+  --sidebars-width-wide: 350px;
+  --desktop-query: var(--main-column-width)  + var(--sidebars-width)  * 2;
+  box-sizing: border-box !important;
+}
+
+/*# sourceMappingURL=index.7f3a5806.css.map */
