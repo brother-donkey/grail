@@ -15,24 +15,38 @@
 
     <main id="layout-main" class="main overflow-hidden">
       <div class="markdown margin-top-md">
-      <h1 class="font-weight-bold">Handling overflow</h1>
-      <p>
-        On site that can expect code blocks or long strings of unbroken (no spaces or word breaks) text, Grail's containers can exceed their specified widths. This is not a problem unique to Grail, but one that is inherent to many site layouts. This page details a few methods of solving that issue.
-      </p>
-      <h2>Breaking text</h2>
-      <p>
-        If you have control over how the text is rendered, we recommend adding <code>wbr</code> elements, non-breaking spaces, or using CSS to ensure the text wraps.
-      </p>
-      <p>
-        If this is not possible, then it might be time to invest in a side scrolling container (such as the one used by code blocks and tables on this site).
-      </p>
-      <pre
+        <h1 class="font-weight-bold">Handling overflow</h1>
+        <p>
+          On site that can expect code blocks or long strings of unbroken (no
+          spaces or word breaks) text, Grail's containers can exceed their
+          specified widths. This is not a problem unique to Grail, but one that
+          is inherent to many site layouts. This page details a few methods of
+          solving that issue.
+        </p>
+        <h2>Breaking text</h2>
+        <p>
+          If you have control over how the text is rendered, we recommend adding
+          <code>wbr</code> elements, non-breaking spaces, or using CSS to ensure
+          the text wraps.
+        </p>
+        <p>
+          If this is not possible, then it might be time to invest in a side
+          scrolling container (such as the one used by code blocks and tables on
+          this site).
+        </p>
+        <pre
           class="word-break-break-all margin-top-md"
         ><code class="hljs-language-scss">iamalongstringofunbrokentextthatcouldpotentiallycausealayoutcontainertoexceedthewidthofthescreen!</code></pre>
-      <h2>Overflow</h2>
-      <p>
-          Although far from ideal, an easy way of ensuring text wraps (and inner scrolling containers scroll), is to set overflow:hidden the parent container that is growing to large. This ensure text wraps, but has several downsides - UI elements that are intended to go beyond the container (such as a popup menu) may get cut off, for example.
-      </p>
+        <h2>Overflow</h2>
+        <p>
+          Although far from ideal, an easy way of ensuring text wraps (and inner
+          scrolling containers scroll) is to set <code>overflow:hidden</code> on
+          the parent container that is growing too large. This ensures text
+          wraps, but has several downsides. For example, UI elements that are
+          intended to go beyond the container (such as a popup menu) may get cut
+          off.
+        </p>
+      </div>
     </main>
     <include src="./site/includes/nav.html"></include>
     <include src="./site/includes/footer.html"></include>
