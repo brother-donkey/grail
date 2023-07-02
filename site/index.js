@@ -34,6 +34,7 @@ class ModalTriggerElement extends HTMLElement {
       // being lazy here, I admit
       if (this.modal.hidden) {
         document.documentElement.style.cssText = "";
+        this.querySelector("button")?.focus();
       } else {
         constrainFocus(this, this.modal);
         this.querySelector("button").focus();
@@ -137,12 +138,9 @@ class ModalElement extends HTMLElement {
       const burger = document.querySelector(".burger");
       burger.classList.toggle("burger-expanded");
       burger.setAttribute("aria-expanded", false);
-
+      this.controlledBy.querySelector("button")?.focus();
       this.hidden = true;
     });
-    // this.addEventListener("click", (e) => {
-    //   console.log({ sharedId: this.sharedId, controlledBy: this.controlledBy });
-    // });
   }
 }
 
@@ -156,6 +154,13 @@ if (!window.customElements.get("modal-trigger")) {
   window.customElements.define("modal-trigger", ModalTriggerElement);
 }
 
+window.addEventListener("keydown", (e) => {
+  if (e.key !== "Escape") {
+    return;
+  }
+  window.dispatchEvent(new CustomEvent("CloseModals"));
+});
+
 window.addEventListener("click", (e) => {
   const content =
     e.target instanceof Element && e.target.closest(".modal-content");
@@ -168,6 +173,5 @@ window.addEventListener("click", (e) => {
   if (!target) {
     return;
   }
-  console.log("CloseModals");
   window.dispatchEvent(new CustomEvent("CloseModals"));
 });
