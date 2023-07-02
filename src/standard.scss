@@ -34,7 +34,7 @@
 
     @media screen and (min-width: #{$grail-breakpoint-large}) {
       grid-template:
-        auto 1fr auto / auto #{$side-bar-width-wide} 768px
+        auto 1fr auto / auto #{$side-bar-width-wide} #{$standard-main-width-wide}
         #{$side-bar-width-wide} auto;
       grid-template-areas:
         "header header header header header"

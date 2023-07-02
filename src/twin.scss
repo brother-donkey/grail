@@ -16,6 +16,18 @@
     background-color: inherit;
   }
 
+  // when nav isn't present a double row gap appears, this offsets that with negative margin then ... (see next block)
+  .#{$grail-class-prefix}main,
+  .#{$grail-class-prefix}aside {
+    margin-top: calc(-1 * $layout-gap-block);
+  }
+
+  // ... this removes margin above if nav is present and located in the DOM before main and aside
+  .#{$grail-class-prefix}nav ~ .#{$grail-class-prefix}main,
+  .#{$grail-class-prefix}nav ~ .#{$grail-class-prefix}aside {
+    margin-top: 0;
+  }
+
   .#{$grail-class-prefix}aside {
     padding-inline: calc(#{$layout-gap-inline} / 2) $layout-gap-inline;
   }
@@ -35,11 +47,12 @@
     }
 
     @media screen and (min-width: $grail-breakpoint-extra-large) {
-      grid-template: auto 1fr auto / #{$side-bar-width-wide} 1fr 1fr;
+      grid-template: auto auto 1fr auto / 1fr 1fr;
       grid-template-areas:
-        "header header header"
-        "nav main aside"
-        "footer footer footer";
+        "header header"
+        "nav nav"
+        "main aside"
+        "footer footer";
     }
   }
 }
