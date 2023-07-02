@@ -74,14 +74,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "wireit": "^0.9.5",
-    "lightningcss": "^1.19.0",
+    "@changesets/cli": "^2.26.1",
     "@microsoft/atlas-css": "^3.27.0",
     "@microsoft/atlas-js": "^1.5.4",
+    "@parcel/packager-raw-url": "^2.8.0",
     "@parcel/transformer-sass": "^2.8.0",
-    "parcel": "^2.8.0",
+    "@parcel/transformer-webmanifest": "^2.8.0",
     "http-server": "^14.1.1",
+    "lightningcss": "^1.19.0",
+    "parcel": "^2.8.0",
     "posthtml-include": "^1.7.4",
-    "@changesets/cli": "^2.26.1"
+    "wireit": "^0.9.5"
   }
 }
