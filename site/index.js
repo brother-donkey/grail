@@ -37,6 +37,8 @@ class ModalTriggerElement extends HTMLElement {
       } else {
         constrainFocus(this, this.modal);
         this.querySelector("button").focus();
+        burger.setAttribute("aria-expanded", true);
+
         document.documentElement.style.overflow = "hidden";
       }
     });
@@ -134,6 +136,7 @@ class ModalElement extends HTMLElement {
     window.addEventListener("CloseModals", () => {
       const burger = document.querySelector(".burger");
       burger.classList.toggle("burger-expanded");
+      burger.setAttribute("aria-expanded", false);
 
       this.hidden = true;
     });

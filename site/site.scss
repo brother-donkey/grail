@@ -54,7 +54,12 @@ html {
   width: 48px;
   height: 48px;
   border-radius: $border-radius;
+  outline-color: $text;
   cursor: pointer;
+
+  &[aria-expanded="true"] {
+    outline-color: $text-invert;
+  }
 
   &:not(.burger-expanded):hover {
     background-color: $body-background-medium;
