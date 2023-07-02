@@ -1,14 +1,4 @@
-/*!
-  Theme: GitHub
-  Description: Light theme as seen on github.com
-  Author: github.com
-  Maintainer: @Hirse
-  Updated: 2021-05-15
-
-  Outdated base version: https://github.com/primer/github-syntax-light
-  Current colors taken from GitHub's CSS
-*/
-.theme-light {
+%highlight-light {
   .hljs {
     color: #24292e;
     background: #fff;
@@ -102,27 +92,7 @@
   }
 }
 
-.theme-dark {
-  pre code.hljs {
-    display: block;
-    overflow-x: auto;
-    padding: 1em;
-  }
-
-  code.hljs {
-    padding: 3px 5px;
-  }
-
-  /*!
-      Theme: GitHub Dark
-      Description: Dark theme as seen on github.com
-      Author: github.com
-      Maintainer: @Hirse
-      Updated: 2021-05-15
-    
-      Outdated base version: https://github.com/primer/github-syntax-dark
-      Current colors taken from GitHub's CSS
-    */
+%highlight-dark {
   .hljs {
     color: #c9d1d9;
   }
@@ -213,4 +183,12 @@
     color: #ffdcd7;
     background-color: #67060c;
   }
+}
+
+.theme-light {
+  @extend %highlight-light;
+}
+
+.theme-dark {
+  @extend %highlight-dark;
 }
